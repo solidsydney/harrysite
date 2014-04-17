@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+
+<h4>
+  <%= @message.title %>
+</h4>
+
+<%= raw @message.body %>
+
+Click <%= link_to "here", unsubscribe_url(email: @email) %> to unsubscribe to the newsletter
+
+
+</body>
+</html>

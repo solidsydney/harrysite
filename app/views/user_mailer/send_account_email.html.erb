@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <style>
+      p {
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+<p>
+  <strong>Welcome to Blanck Digital, <%= @user.email %>.</strong><br />
+  ===============================================  <br />
+  An account has been created for you.<br />
+  This account allows you to read current and previous editions of our magazines.
+</p>
+<p>
+  To login to the site, just click: <%= link_to "Here", root_url  %>.<br />
+</p>
+
+<p>
+  The login details are below:<br />
+  Email: <%= @user.email %><br />
+  Password: <%= @user.password %><br />
+</p>
+<p>
+  Thanks,<br />
+  Franka Asindi. CEO Blanck Digital<br />
+  <%= link_to "blanckdigital.com", root_url %>
+</p>
+</body>
+</html>

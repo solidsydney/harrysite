@@ -1,0 +1,17 @@
+<div class="row-fluid" >
+<%= render "cover"%>
+
+<% if @top_posts.any? %>
+   <%= render partial: "top_post", collection: @top_posts, as: :post%>
+<% end %>
+
+</div>
+<div class="row-fluid">
+  <%= render partial: "three_post", collection: @three_posts, as: :post %>
+</div>
+<div class="row-fluid">
+  <%= render "three_post", post: @last_post %>
+  <%= render "video_post", video: @video%>
+</div>
+<%= render "bottom_items" %>
+<%= render "last_bottom_items" %>

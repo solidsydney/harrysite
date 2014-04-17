@@ -1,0 +1,2 @@
+module Manage::IssuesHelper
+end

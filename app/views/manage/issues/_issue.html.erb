@@ -1,0 +1,28 @@
+<div class="media social-box">
+  <div class="header">
+    <h4><%= issue.title %></h4>
+  </div>
+  <div class="media-body social-body">
+    <% if issue.cover.present? %>
+        <div class="social-share-image" style="text-align: center;">
+          <%= image_tag issue.cover(:large) %>
+        </div>
+    <% end %>
+    <div class="body">
+      <%= issue.description %>
+      <p>
+        <b>Published: <%= issue.publish_on.to_date.to_s(:long) %></b> | <small>Created:<%= time_ago_in_words issue.created_at %> ago <i class="icon-globe"></i></small>
+      </p>
+      <div class="btn-group hidden-phone">
+        <%= link_to "read more", manage_issue_path(issue), class: "btn" %>
+        <%= link_to "Edit", edit_manage_issue_path(issue), class: "btn btn-info" %>
+        <%= link_to "Delete", manage_issue_path(issue), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this post"} %>
+        <% if issue.active? %>
+          <%= link_to "Remove from slide", deactivate_manage_issue_path(issue), method: :post, class: "btn btn-danger", data: {confirm: "Are you sure you want to remove form slide"} %>
+        <%# else %>
+            <%#= link_to "Remove from slide", deactivate_manage_issue_path(issue), method: :post, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this post"} %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

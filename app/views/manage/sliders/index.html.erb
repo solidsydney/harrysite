@@ -1,0 +1,51 @@
+<%= content_for(:breadcrumb) do %>
+    <li>
+      <%= link_to "Dashboard", manage_root_url %>
+      <span class="icon-angle-right"></span>
+    </li>
+    <li>
+      <%= link_to_unless_current "Categories", manage_categories_path %>
+    </li>
+<% end %>
+
+<%= content_for(:page_title) do %>
+    Manage Slides <span class="right-icon"><%= link_to "Add slide", new_manage_slider_path, class: "btn" %></span>
+<% end %>
+
+<div class="row-fluid">
+  <div class="span12">
+    <div class="social-box">
+      <div class="header">
+        <h4>Slides</h4>
+      </div>
+      <div class="body">
+        <% if @sliders.empty? %>
+            <p>
+              No slides available yet
+            </p>
+        <% else %>
+            <table class="table table-striped table-bordered dataTable">
+              <thead>
+              <tr>
+                <th>Name</th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @sliders.each do |slider| %>
+                  <tr>
+                    <td><%= slider.name %></td>
+                    <td><%= link_to slider.url, slider.url, target: "_blank"%></td>
+                    <td><%= image_tag slider.slide(:trend_small)%></td>
+                    <td><%= link_to "Delete", manage_slider_path(slider), data: {confirm: "Are you sure"}, class: "btn btn-danger", method: :delete %>
+                    <%= link_to "Edit", edit_manage_slider_path(slider), class: "btn" %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<%= simple_form_for([:manage, @issue], html: {class: 'form-horizontal' }) do |f| %>
+
+    <% if @issue.errors.any? %>
+        <div class="alert alert-error" style="margin-top: 10px;">
+          <h4><%= pluralize(@issue.errors.count, "error") %> prohibited this Mag from being saved:</h4>
+
+          <ul>
+            <% @issue.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <fieldset style="margin-top:20px">
+      <%= f.input :title, input_html: {class: "input-xlarge"} %>
+      <%= f.input :cover, as: :file %>
+      <%= f.input :mag_url %>
+      <%= f.input :description, as: :text, input_html: {rows:3}%>
+      <%= f.input :url %>
+
+      <%= f.input :publish_on, as: :string %>
+
+
+      <div class="form-actions">
+        <%= f.submit class: "btn btn-primary" %>  or <%= link_to "Cancel", :back, class: "btn btn-danger" %>
+      </div>
+    </fieldset>
+<% end %>
+

@@ -1,0 +1,166 @@
+<aside class="social-sidebar sidebar-full">
+<div class="social-sidebar-content nano">
+  <div class="content">
+
+
+    <div class="clearfix"></div>
+
+    <section class="menu">
+
+      <div class="accordion" id="accordion2">
+        <div class="accordion-group <%= active_controller("dashboard") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("dashboard") %>" href="<%= url_for manage_root_url %>">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/home.png" %>
+              <span>Dashboard</span>
+            </a>
+          </div>
+        </div>
+        <div class="accordion-group <%= active_controller("users") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("users") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-blog">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>Admin Users</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-blog" class="accordion-body collapse nav nav-list collapse <%= in_open("users")%>">
+
+            <li class="<%= active_controller("users", "new") %>"><%= link_to "Create user", new_manage_user_path %></li>
+            <li class="<%= active_controller("users", "index") %>"><%= link_to "Manage all users", manage_users_path %></li>
+          </ul>
+        </div>
+
+        <div class="accordion-group <%= active_controller("posts") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("posts") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-posts">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>Blog</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-posts" class="accordion-body collapse nav nav-list collapse <%= in_open("issues")%>">
+
+            <li class="<%= active_controller("posts", "new") %>"><%= link_to "Create Blog Post", new_manage_post_path %></li>
+            <li class="<%= active_controller("posts", "index") %>"><%= link_to "Manage all Posts", manage_posts_path %></li>
+          </ul>
+        </div>
+
+        <div class="accordion-group <%= active_controller("issues") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("issues") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-issues">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>Issues</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-issues" class="accordion-body collapse nav nav-list collapse <%= in_open("issues")%>">
+
+            <li class="<%= active_controller("issues", "new") %>"><%= link_to "Upload New Issue", new_manage_issue_path %></li>
+            <li class="<%= active_controller("issues", "index") %>"><%= link_to "Manage All Issues", manage_issues_path %></li>
+          </ul>
+        </div>
+
+        <div class="accordion-group <%= active_controller("sliders") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("sliders") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-slider">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>Slider</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-slider" class="accordion-body collapse nav nav-list collapse <%= in_open("sliders")%>">
+
+            <li class="<%= active_controller("sliders", "new") %>"><%= link_to "New Sliders", new_manage_slider_path %></li>
+            <li class="<%= active_controller("sliders", "index") %>"><%= link_to "All Sliders ", manage_sliders_path %></li>
+          </ul>
+        </div>
+
+        <div class="accordion-group <%= active_controller("contacts") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("contacts") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-contacts">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>Subscribers</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-contacts" class="accordion-body collapse nav nav-list collapse <%= in_open("contacts")%>">
+
+            <li class="<%= active_controller("contacts", "new") %>"><%= link_to "Import Contacts", new_manage_contact_import_path %></li>
+            <li class="<%= active_controller("contacts", "index") %>"><%= link_to "All Contcts", manage_contacts_path %></li>
+          </ul>
+        </div>
+
+
+        <div class="accordion-group <%= active_controller("news_letters") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("news_letters") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-news_letters">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>News Letters</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-news_letters" class="accordion-body collapse nav nav-list collapse <%= in_open("news_letters")%>">
+
+            <li class="<%= active_controller("news_letters", "new") %>"><%= link_to "Create News Letter", new_manage_news_letter_path %></li>
+            <li class="<%= active_controller("news_letters", "index") %>"><%= link_to "All News Letters", manage_news_letters_url %></li>
+          </ul>
+        </div>
+
+        <div class="accordion-group <%= active_controller("categories") %>">
+          <div class="accordion-heading">
+
+            <a class="accordion-toggle <%= opened_tab("categories") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-category">
+              <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+              <span>Categories</span>
+
+
+
+              <span class="arrow"></span>
+            </a>
+          </div>
+
+          <ul id="collapse-category" class="accordion-body collapse nav nav-list collapse <%= in_open("categories")%>">
+
+            <li class="<%= active_controller("categories", "new") %>"><%= link_to "Create category", new_manage_category_path %></li>
+            <li class="<%= active_controller("categories", "index") %>"><%= link_to "Manage all categories", manage_categories_path %></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</aside>
+

@@ -1,0 +1,32 @@
+<%= content_for(:breadcrumb) do %>
+    <li>
+      <%= link_to "Dashboard", manage_root_url %>
+      <span class="icon-angle-right"></span>
+    </li>
+    <li>
+      <%= link_to "Mag Issues", manage_issues_path %>
+      <span class="icon-angle-right"></span>
+    </li>
+    <li>
+      <%= link_to_unless_current "Upload Mag Issue", new_manage_issue_path %>
+    </li>
+<% end %>
+
+<%= content_for(:page_title) do %>
+    Edit Issue
+<% end %>
+
+
+<div class="row-fluid">
+  <div class="offset1 span10">
+    <div class="social-box">
+      <div class="header">
+        <h4>Add a new Mag</h4>
+      </div>
+      <div class="body">
+        <%= render "form" %>
+      </div>
+    </div>
+  </div>
+</div>
+

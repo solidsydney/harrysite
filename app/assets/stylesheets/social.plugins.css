@@ -1,0 +1,43 @@
+.gritter-success .gritter-item-wrapper {
+    background-color: #d6e9c6;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    border: none;
+    color: #468847;
+}
+
+.gritter-success .gritter-item {
+    background-color: #dff0d8;
+    color: #468847;
+}
+
+.gritter-success .gritter-title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 0 7px 0;
+    display: block;
+    color: #468847;
+}
+
+#gritter-notice-wrapper .gritter-error  {
+    background-color: #ffd9da;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    border: none;
+    color: #b94a48;
+}
+
+.gritter-error .gritter-item {
+    background-color: #ffebe8;
+    color: #b94a48
+}
+
+.gritter-error .gritter-title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 0 7px 0;
+    display: block;
+    color: #b94a48
+}

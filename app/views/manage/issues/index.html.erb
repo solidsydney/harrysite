@@ -1,0 +1,20 @@
+<%= content_for(:breadcrumb) do %>
+    <li>
+      <%= link_to "Dashboard", manage_root_url %>
+      <span class="icon-angle-right"></span>
+    </li>
+    <li>
+      <%= link_to_unless_current "Issues", manage_issues_path %>
+    </li>
+<% end %>
+
+<%= content_for(:page_title) do %>
+    Manage Mag Issues <span class="right-icon"><%= link_to "Create issue", new_manage_issue_path, class: "btn" %></span>
+<% end %>
+
+
+<div class="row-fluid">
+  <div class="offset2 span8">
+    <%= render @issues %>
+  </div>
+</div>

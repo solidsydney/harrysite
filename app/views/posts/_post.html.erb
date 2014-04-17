@@ -1,0 +1,30 @@
+<div class="cover">
+  <div class="post">
+
+    <a class="article_thumb">
+      <%= image_tag post.post_image(:thumb)%>
+    </a>
+    <div class="aricle_ref_box caption">
+      <header class="heading_blog">
+        <h2>
+          <a href="<%= url_for post %>" class="transitionable">
+           <%= post.title %>
+          </a>
+        </h2>
+      </header>
+
+      <p class="blog_meta">posted in
+        <a  class="transitionable category" href="#">
+          <span>Blog</span>
+        </a>
+        <span class="date"> on&nbsp;&nbsp; <%= post.publish_on.to_date.to_s(:long)%>
+        | <a href="<%= url_for post %>#disqus_thread" class="transitionable"></a>
+        </span>
+      </p>
+
+      <p>
+        <%= post.summary %>
+      </p>
+    </div>
+  </div>
+</div>

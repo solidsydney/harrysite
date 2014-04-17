@@ -1,0 +1,14 @@
+<li>
+  <%= link_to image_tag(post.post_image(:th_new), width: "110", height: "96", class: "attachment-post-thumbnail wp-post-image no-display appear"), post %>
+  <div class="content">
+
+    <time><%= post.publish_on.to_date.to_s(:long)%> </time>
+    <a href="<%= url_for post_url(post) %>" title="<%= post.title%>">
+      <%= post.title %>
+    </a>
+    <div class="post-meta">
+      <%= raw post.categories.map { |tag| link_to tag.name, category_path(tag) }.join(" ") %>
+    </div>
+  </div>
+
+</li>

@@ -1,0 +1,17 @@
+<article class="span4 mid">
+  <div class="img">
+    <%= image_tag post.post_image(:th_new)%>
+    <div class="overlay"></div>
+  </div>
+  <div class="info">
+    <p class="tags">
+      <%= raw post.categories.map { |tag| link_to tag.name, category_path(tag) }.join(" ") %>
+    </p>
+    <h1><%= link_to truncate(post.title, length: 30, omission: ".."), video_path(post), title: post.title %></h1>
+    <p class="details"><%= post.publish_on.to_date.to_s(:long)%> | <%= link_to "BlanckDigital", root_url%></p>
+    <p class="text">
+      <%= truncate post.summary, length: 150 %>
+    </p>
+  </div>
+
+</article>

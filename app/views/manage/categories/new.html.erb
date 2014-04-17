@@ -1,0 +1,46 @@
+<%= content_for(:breadcrumb) do %>
+    <li>
+      <%= link_to "Dashboard", manage_root_url %>
+      <span class="icon-angle-right"></span>
+    </li>
+    <li>
+      <%= link_to "Manage Categories", manage_categories_path %>
+      <span class="icon-angle-right"></span>
+    </li>
+<% end %>
+
+<%= content_for(:page_title) do %>
+   New Caegory
+<% end %>
+
+
+<div class="row-fluid">
+  <div class="offset1 span10">
+    <div class="social-box">
+      <div class="header">
+        <h4>New Category</h4>
+      </div>
+      <div class="body">
+
+        <%= form_for [:manage, @category] do |f| %>
+            <% if @category.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from completing:</h2>
+                  <ul>
+                    <% @category.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+
+            <div class="field">
+              <%= f.text_field :name %>
+            </div>
+            <div class="buttons" style="margin-top: 10px;"><%= f.submit class: "btn" %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

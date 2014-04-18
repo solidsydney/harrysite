@@ -97,6 +97,7 @@ Franka::Application.routes.draw do
   end
 
   get "unsubscribe/:email" => "contacts#unsubscribe_mail_chimp_email", as: :unsubscribe
+  get "unsubscribe_notice" => "contacts#unsubscribe_notice", as: :unsubscribe_notice
 
   get "/search" => "welcome#search", as: :search
   resources :posts

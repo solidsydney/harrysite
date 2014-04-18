@@ -32,7 +32,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find_by(email: @email)
     @contact.active = false
     @contact.save
-    redirect_to root_url
+    redirect_to unsubscribe_notice_url
 =begin
     #begin
       #gb = Gibbon::API.new("117a1dbf06bbf00c05855669a4c75b06-us3")

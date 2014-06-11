@@ -7,11 +7,11 @@ class IssuesController < ApplicationController
   def show
     @issue = Issue.find(params[:id])
     respond_to do |format|
-      if mobile_device?
-        format.html {render layout: "mobile"}
-      else
-        format.html {render layout: "application"}
-      end
+      #if mobile_device?
+       # format.html {render layout: "mobile"}
+      #else
+        format.html
+      #end
     end
   end
 

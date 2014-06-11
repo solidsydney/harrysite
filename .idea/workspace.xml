@@ -49,10 +49,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobile.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/mobile.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6201117" vertical-offset="333" max-vertical-offset="1905">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="13.875" vertical-offset="333" max-vertical-offset="1905">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="52" selection-start="528" selection-end="528" vertical-scroll-proportion="0.26737967" vertical-offset="0" max-vertical-offset="1935">
               <folding />
             </state>
           </provider>
@@ -103,15 +112,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -141,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/views/application/_master_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/subscriber_mailer/send_news_letter.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20140411000222_add_active_to_contact.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/master.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
@@ -177,6 +176,7 @@
         <option value="$PROJECT_DIR$/app/controllers/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/issues_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -732,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="33" selection-start="1613" selection-end="1613" vertical-scroll-proportion="-24.916666" vertical-offset="77" max-vertical-offset="1935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/mobile.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="22" selection-start="528" selection-end="528" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="15600">
@@ -837,7 +830,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/mobile.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6201117" vertical-offset="333" max-vertical-offset="1905">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="13.875" vertical-offset="333" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="52" selection-start="528" selection-end="528" vertical-scroll-proportion="0.26737967" vertical-offset="0" max-vertical-offset="1935">
           <folding />
         </state>
       </provider>

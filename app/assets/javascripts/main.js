@@ -67,20 +67,6 @@ $( document ).ready(function() {
 				  pause: 4000
 				});
 		}
-
-		
-		$('.post-slider .slides').bxSlider({
-		  speed: 600,
-		  touchEnabled: true,
-		  pager: false,
-		  infiniteLoop: true,
-		  nextSelector: ".post-slider .controls .next",
-		  prevSelector: ".post-slider .controls .prev",
-		  fadeText: true,
-		  auto: true,
-		  pause: 10000
-
-		});
 	}
 
 

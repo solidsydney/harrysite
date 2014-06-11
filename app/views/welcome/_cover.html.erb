@@ -30,27 +30,23 @@
 
 <div class="post-slider span8">
 <div class="">
-
   <% if @mags.any? %>
-      <article class="big clearfix <%# unless mobile_device? %>cover<%# end %>">
-        <div id="myCarousel" class="carousel slide">
-          <!-- Carousel items -->
-          <div class="carousel-inner">
+      <section class="slider cover">
+        <div class="flexslider">
+          <ul class="slides">
             <% @mags.each do |mag| %>
-            <div class="<% if mag == @mags.first %>active<% end %> item">
+            <li>
+
               <a href="<%= url_for mag%>">
                 <%= image_tag mag.cover(:large) %>
               </a>
+            </li>
+            <% end %>
 
-            </div>
-           <% end %>
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-          </div>
-          <!-- Carousel nav -->
-
+          </ul>
         </div>
-      </article>
+      </section>
+
   <% end %>
 </div>
 </div>

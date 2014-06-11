@@ -17,7 +17,6 @@
 //= require jquery.stellar
 //= require jquery-migrate-1.2.1
 
-//= require jquery.bxslider
 //= require jquery.countdown
 //= require fluidvids
 //= require retina-1.1.0.min
@@ -27,12 +26,20 @@
 //= require nprogress-turbolinks
 //= require google-analytics-turbolinks
 //= require contacts
+//= require jquery.flexslider
+//= require shCore
+//= require shBrushXml
+//= require shBrushJScript
+//= require jquery.easing
+//= require jquery.mousewheel
 
 $(function(){
-    $('.carousel').carousel({
-        interval: 5000
-    })
-})
+    $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: false
+    });
+});
+
 
 
 

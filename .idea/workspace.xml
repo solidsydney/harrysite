@@ -75,22 +75,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flexslider.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="flexslider.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/flexslider.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="20" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1530">
-              <folding>
-                <marker date="1402525992768" expanded="true" signature="582:947" placeholder="{...}" />
-                <marker date="1402525992768" expanded="true" signature="5103:5227" placeholder="{...}" />
-              </folding>
+            <state line="31" column="14" selection-start="870" selection-end="870" vertical-scroll-proportion="0.5080214" vertical-offset="180" max-vertical-offset="1530">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="social.plugins.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="social.plugins.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/social.plugins.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+            <state line="20" column="94" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -155,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/welcome/_last_bottom_items.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/manage/base_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/contacts/mail_chimp_email.js.erb" />
@@ -206,6 +202,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/flexslider.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/welcome/_cover.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/flexslider.css.scss" />
       </list>
     </option>
   </component>
@@ -559,14 +556,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41439393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41439393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -967,19 +964,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/flexslider.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/social.plugins.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1530">
-          <folding>
-            <marker date="1402525992768" expanded="true" signature="582:947" placeholder="{...}" />
-            <marker date="1402525992768" expanded="true" signature="5103:5227" placeholder="{...}" />
-          </folding>
+        <state line="20" column="94" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/social.plugins.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/flexslider.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+        <state line="31" column="14" selection-start="870" selection-end="870" vertical-scroll-proportion="0.5080214" vertical-offset="180" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <style>
+      p {
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+<p>
+  <strong>Welcome to BlanckDigital, <%= @user.display_name %>.</strong><br />
+  ===============================================  <br />
+  An account has been created for you.<br />
+</p>
+<p>
+  To login to the site, just click: <%= link_to "Here", manage_root_url  %>.<br />
+  To ensure the continued security of your account, you will be asked to change your password when you sign in.<br />
+</p>
+
+<p>
+  The login details are below:<br />
+  Email: <%= @user.email %><br />
+  Password: <%= @user.password %><br />
+</p>
+<p>
+  Thanks<br />
+</p>
+</body>
+</html>

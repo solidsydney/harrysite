@@ -3,28 +3,28 @@
 
 <div id="blog_show" class="row-fluid" >
 
-  <div class="span8">
+  <div class="span12">
 
     <section>
 
-      <header class="show_header">
-        <h1>
-          <a href="#">
-            Sign up
-          </a>
-        </h1>
+      <header>
+          <h1 style="border-bottom: none;">
+            Sign Up
+          </h1>
       </header>
 
       <div  class="cover_container ">
 
 
-        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class:"form-horizontal"}) do |f| %>
             <%= f.error_notification %>
 
             <div class="form-inputs">
-              <%= f.input :email, :required => true, :autofocus => true %>
-              <%= f.input :password, :required => true %>
-              <%= f.input :password_confirmation, :required => true %>
+              <%= f.input :first_name, :required => true, input_html: {class: "span9"} %>
+              <%= f.input :last_name, :required => true, input_html: {class: "span9"}  %>
+              <%= f.input :email, :required => true, :autofocus => true, input_html: {class: "span9"}  %>
+              <%= f.input :password, :required => true, input_html: {class: "span9"}  %>
+              <%= f.input :password_confirmation, :required => true, input_html: {class: "span9"}  %>
             </div>
 
             <div class="form-actions">
@@ -43,13 +43,6 @@
 
     </section>
   </div>
-
-
-
-
-
-
-  <%= render "posts/sidebar" %>
 
 </div>
 

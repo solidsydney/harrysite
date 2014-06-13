@@ -17,6 +17,7 @@
             </a>
           </div>
         </div>
+        <% if current_user.admin? %>
         <div class="accordion-group <%= active_controller("users") %>">
           <div class="accordion-heading">
 
@@ -32,8 +33,8 @@
 
           <ul id="collapse-blog" class="accordion-body collapse nav nav-list collapse <%= in_open("users")%>">
 
-            <li class="<%= active_controller("users", "new") %>"><%= link_to "Create user", new_manage_user_path %></li>
-            <li class="<%= active_controller("users", "index") %>"><%= link_to "Manage all users", manage_users_path %></li>
+            <li class="<%= active_controller("administrators", "new") %>"><%= link_to "Create user", new_manage_administrator_path %></li>
+            <li class="<%= active_controller("administrators", "index") %>"><%= link_to "Manage all users", manage_administrators_path %></li>
           </ul>
         </div>
 
@@ -157,6 +158,27 @@
             <li class="<%= active_controller("categories", "index") %>"><%= link_to "Manage all categories", manage_categories_path %></li>
           </ul>
         </div>
+       <% elsif current_user.editor? %>
+            <div class="accordion-group <%= active_controller("posts") %>">
+              <div class="accordion-heading">
+
+                <a class="accordion-toggle <%= opened_tab("posts") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-posts">
+                  <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+                  <span>Blog</span>
+
+
+
+                  <span class="arrow"></span>
+                </a>
+              </div>
+
+              <ul id="collapse-posts" class="accordion-body collapse nav nav-list collapse <%= in_open("issues")%>">
+
+                <li class="<%= active_controller("posts", "new") %>"><%= link_to "Create Blog Post", new_manage_post_path %></li>
+                <li class="<%= active_controller("posts", "index") %>"><%= link_to "Manage all Posts", manage_posts_path %></li>
+              </ul>
+            </div>
+       <% end %>
       </div>
     </section>
 

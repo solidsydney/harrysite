@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140415205404) do
+ActiveRecord::Schema.define(version: 20140613110614) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -117,7 +117,10 @@ ActiveRecord::Schema.define(version: 20140415205404) do
     t.text     "summary"
     t.integer  "views_count",             default: 0
     t.integer  "impressions_count",       default: 0
+    t.integer  "user_id"
   end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "product_types", force: true do |t|
     t.string   "name"
@@ -151,6 +154,9 @@ ActiveRecord::Schema.define(version: 20140415205404) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "editor",                 default: false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -71,6 +71,12 @@ Franka::Application.routes.draw do
      namespace :manage do
        root 'dashboard#index'
        resources :posts
+       resources :administrators do
+         member do
+           get 'change_password'
+           put 'change_my_password'
+         end
+       end
        resources :categories
        resources :issues do
          member do

@@ -11,15 +11,16 @@ class Post < ActiveRecord::Base
   validates_attachment_size :post_image, :less_than => 1.megabyte
   validates_attachment_presence :post_image
 
-  validates :publish_on, :title, :summary, :presence => true
-  scope :published, -> { where('publish_on <= ?', Time.now.utc) }
+  validates :title, :summary, :presence => true
+  scope :published, -> { where('publish_on <= ? AND publish_on IS NOT NULL', Time.now.utc) }
   scope :blog_posts, -> { where(post_type: "Blog") }
   scope :top_posts, -> { where(post_type: "Blog").order("impressions_count desc").limit(12) }
   scope :video_posts, -> { where(post_type: "Video")}
   scope :recent,  -> {order("publish_on desc")}
   scope :front_video_posts, -> { where(post_type: "Video").limit(4) }
+  belongs_to :user
 
-  validates :title, :publish_on, :post_type, :presence => true
+  validates :title, :post_type, :presence => true
   validates :body, presence: true, if: :blog_post
 
   validates :video_url, presence: true, if: :video_post

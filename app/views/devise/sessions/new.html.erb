@@ -1,23 +1,18 @@
-
-
-
 <div id="blog_show" class="row-fluid" >
 
-  <div class="span8">
+  <div class="span12">
 
     <section>
 
-      <header class="show_header">
-        <h1>
-          <a href="#">
-            Sign in
-          </a>
+      <header>
+        <h1 style="border-bottom: none;">
+          Sign In
         </h1>
       </header>
 
       <div  class="cover_container ">
 
-        <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+        <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
 
             <% if flash.any? %>
                 <% flash.each do |name, msg| %>
@@ -27,8 +22,8 @@
                     </div>
                 <% end end %>
             <div class="form-inputs">
-              <%= f.input :email, :required => false, :autofocus => true %>
-              <%= f.input :password, :required => false %>
+              <%= f.input :email, :required => false, :autofocus => true, input_html: {class: "span9"} %>
+              <%= f.input :password, :required => false, input_html: {class: "span9"} %>
               <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
             </div>
 
@@ -54,7 +49,7 @@
 
 
 
-  <%= render "posts/sidebar" %>
+  <%#= render "posts/sidebar" %>
 
 </div>
 

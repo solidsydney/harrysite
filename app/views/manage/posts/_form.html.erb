@@ -32,7 +32,9 @@
               <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full', 'require' => false}, class: "ckeditor"} %>
     <% end %>
       <% end %>
-      <%= f.input :publish_on, as: :string %>
+      <% if current_user.admin?  %>
+        <%= f.input :publish_on, as: :string %>
+      <% end %>
 
       <div class="control-group string required post_title">
         <%= f.label :categories, class:"required control-label"%>

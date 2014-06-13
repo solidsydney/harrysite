@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap_and_overrides
- *= require social.css.scss
+ *= require social
  *= require DT_bootstrap
  *= require jquery.ui.all
  *= require social.plugins

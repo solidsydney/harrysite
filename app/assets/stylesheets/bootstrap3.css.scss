@@ -641,13 +641,13 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  line-height: 1;
+  line-height: 20px;
   color: inherit;
   text-rendering: optimizelegibility;
+  color:#222;
 }
-
 h1 small,
 h2 small,
 h3 small,
@@ -658,82 +658,87 @@ h6 small {
   line-height: 1;
   color: #999999;
 }
-
-h1 {
-  font-size: 36px;
-  line-height: 14px;
+h1,
+h2,
+h3 {
+  line-height: 40px;
+  line-height: 40px;
 }
-
+h1 {
+  font-size: 38px;
+  line-height: 38px;
+}
 h2 {
   font-size: 30px;
-  line-height: 40px;
+  line-height: 30px;
 }
-
 h3 {
-  font-size: 24px;
-  line-height: 40px;
-}
-
-h4 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
 }
-
+h4 {
+  font-size: 16px;
+  line-height: 16px;
+}
 h5 {
   font-size: 14px;
-  line-height: 20px;
 }
-
 h6 {
   font-size: 12px;
-  line-height: 20px;
 }
-
 h1 small {
   font-size: 24px;
+  line-height: 24px;
 }
-
 h2 small {
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 17px;
 }
-
 h3 small {
   font-size: 14px;
+  line-height: 14px;
 }
-
 h4 small {
   font-size: 14px;
+  line-height: 14px;
 }
-
 .page-header {
   padding-bottom: 9px;
   margin: 20px 0 30px;
   border-bottom: 1px solid #eeeeee;
 }
-
 ul,
 ol {
   padding: 0;
-  margin: 0 0 10px 25px;
+  margin: 0 0;
 }
-
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
 }
-
 li {
   line-height: 20px;
 }
-
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
 
+  *zoom: 1;
+}
 dl {
   margin-bottom: 20px;
 }

@@ -9,7 +9,7 @@
 
   <%= stylesheet_link_tag "admin" %>
   <%= javascript_include_tag "manage" %>
-
+  <%= render "javascript_flash_info"%>
 
 
   <style type="text/css">body{padding-top:40px;padding-bottom:40px;background-color:#e9eaed;}</style>
@@ -58,6 +58,6 @@
 
 <%= yield(:bottom_head) %>
 <%= yield(:bottom) %>
-<%= render "javascript_flash_info"%>
+
 </body>
 </html>

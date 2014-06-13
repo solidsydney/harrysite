@@ -10,7 +10,12 @@
         <h4>Admin Panel</h4>
       </div>
       <div class="body">
-
+        <% if current_user.sign_in_count == 1 %>
+            <p class="alert alert-info">
+              Hi <%= current_user.display_name %> Welcome to the Punch Invoice admin protal.<br /> For your continued security please click the button below to change your password.<br /> If you have already changed your password, please ignore this message. <br/><br/>
+              <%= link_to "Change My Password", change_password_manage_administrator_path(current_user), class: "btn" %>
+            </p>
+        <% end %>
       </div>
     </div>
   </div>

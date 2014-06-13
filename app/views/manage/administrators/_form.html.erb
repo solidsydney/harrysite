@@ -1,0 +1,48 @@
+    <div class="row-fluid">
+      <div class="span8">
+        <fieldset>
+          <div class="control-group formSep">
+            <%= f.label :first_name, raw("First Name <span class='f_req'>*</span>"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :first_name, class: "input-xlarge" %>
+            </div>
+          </div>
+          <div class="control-group formSep">
+            <%= f.label :last_name, raw("Last Name <span class='f_req'>*</span>"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :last_name, class: "input-xlarge" %>
+            </div>
+          </div>
+          <div class="control-group formSep">
+            <%= f.label :email, raw("Email <span class='f_req'>*</span>"), class: "control-label" %>
+            <div class="controls">
+              <%= f.email_field :email, class: "input-xlarge" %>
+            </div>
+          </div>
+          <% if current_user.admin? %>
+          <div class="control-group">
+            <%= f.label :admin, class: "control-label" %>
+            <div class="controls">
+              <%= f.check_box :admin, class: "input-xlarge" %>
+            </div>
+          </div>
+              <div class="control-group">
+                <%= f.label :editor, class: "control-label" %>
+                <div class="controls">
+                  <%= f.check_box :editor, class: "input-xlarge" %>
+                </div>
+              </div>
+         <% end %>
+          <% if @user.new_record? %>
+            <%= f.hidden_field :password %>
+            <%= f.hidden_field :password_confirmation %>
+          <% end %>
+            <div class="control-group">
+              <div class="controls">
+                <%= f.submit class: "btn btn-gebo" %>
+                <%= link_to "Cancel", manage_administrators_path, class: "btn" %>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+    </div>

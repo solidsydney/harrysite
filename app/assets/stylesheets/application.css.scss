@@ -274,6 +274,8 @@ p.leftdesc{
     text-align: right;
 }
 
+
+
 .righttext p{
     font-family: BebasNeueRegular;
     font-size: 30px;
@@ -1037,4 +1039,52 @@ article.big .info {
 
 #twitter-widget-0{
   max-height: 680px !important;
+}
+
+h1{
+  a{
+    font-family: Helvetica, Arial, sans-serif !important;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+
+  }
+}
+
+.menu{
+  li{
+    .basic-c{
+      font-family: Helvetica, Arial, sans-serif !important;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+
+
+.container{
+  border: 1px solid #c7c7c7;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+
+nav .form-search{
+  padding: 25px 0;
+  margin: 0 0 0 30px;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 9px;
+  padding-top: 11px;
+  margin-right: 32px;
+  padding-bottom: 10px;
+  .input-append{
+    width: 210px;
+    float: right;
+  }
 }

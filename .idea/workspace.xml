@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_daily_digest.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="send_daily_digest.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="1470">
+            <state line="23" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1470">
               <folding>
                 <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#0;tag#table#0;tag#body#0;tag#html#0" expanded="false" />
               </folding>
@@ -60,10 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.rake" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="contact.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/contact.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="9" selection-start="244" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.rake" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/account.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="3" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+            <state line="6" column="27" selection-start="243" selection-end="243" vertical-scroll-proportion="0.14469454" vertical-offset="0" max-vertical-offset="622">
               <folding />
             </state>
           </provider>
@@ -150,9 +159,9 @@
         <option value="$PROJECT_DIR$/app/worker/digest_worker.rb" />
         <option value="$PROJECT_DIR$/app/mailers/digest_mailer.rb" />
         <option value="$PROJECT_DIR$/config/schedule.rb" />
-        <option value="$PROJECT_DIR$/lib/tasks/account.rake" />
         <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.text.erb" />
         <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/account.rake" />
       </list>
     </option>
   </component>
@@ -582,11 +591,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/manage/administrators/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="42" selection-start="1768" selection-end="1768" vertical-scroll-proportion="-20.75" vertical-offset="117" max-vertical-offset="810" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="12" selection-start="2174" selection-end="2174" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1770">
@@ -879,13 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/account.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="3" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/post.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="70" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="1140">
@@ -923,10 +920,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="1470">
+        <state line="23" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1470">
           <folding>
             <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#0;tag#table#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/contact.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="244" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/account.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="27" selection-start="243" selection-end="243" vertical-scroll-proportion="0.14469454" vertical-offset="0" max-vertical-offset="622">
+          <folding />
         </state>
       </provider>
     </entry>

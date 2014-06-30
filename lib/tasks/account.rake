@@ -1,7 +1,7 @@
 desc "Send Digest"
 task :send_digest_emails => :environment do
-  #Contact.find_each do |contact|
-    contact = Contact.find_by_email("ramzauchenna@gmail.com")
+  Contact.active_contacts.find_each do |contact|
+    #contact = Contact.active_contacts.find_by_email("ramzauchenna@gmail.com")
     DigestWorker.perform_async(contact.id)
-  #end
+  end
 end

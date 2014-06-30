@@ -65,6 +65,7 @@
             <%= raw post.categories.map { |tag| link_to tag.name, category_url(tag) }.join(" ") %>
             <span class="duration"><%= post.publish_on.to_date.to_s(:long)%></span>
           </p>
+        <p><%= link_to "Read More", post_url(post)%></p>
         </td>
       </tr>
      <% end %>

@@ -40,19 +40,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_daily_digest.text.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="send_daily_digest.text.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.text.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="0.12820514" vertical-offset="0" max-vertical-offset="585">
+            <state line="5" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="send_daily_digest.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="send_daily_digest.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="32" selection-start="1481" selection-end="1490" vertical-scroll-proportion="-2.5" vertical-offset="720" max-vertical-offset="1305">
+            <state line="67" column="56" selection-start="2053" selection-end="2053" vertical-scroll-proportion="0.43589744" vertical-offset="720" max-vertical-offset="1320">
               <folding>
                 <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#0;tag#table#0;tag#body#0;tag#html#0" expanded="false" />
               </folding>
@@ -151,8 +151,8 @@
         <option value="$PROJECT_DIR$/app/mailers/digest_mailer.rb" />
         <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/lib/tasks/account.rake" />
-        <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb" />
         <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.text.erb" />
+        <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb" />
       </list>
     </option>
   </component>
@@ -907,6 +907,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.text.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="28" selection-start="100" selection-end="100" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="345">
@@ -916,17 +923,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="32" selection-start="1481" selection-end="1490" vertical-scroll-proportion="-2.5" vertical-offset="720" max-vertical-offset="1305">
+        <state line="67" column="56" selection-start="2053" selection-end="2053" vertical-scroll-proportion="0.43589744" vertical-offset="720" max-vertical-offset="1320">
           <folding>
             <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#0;tag#table#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.text.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="0.12820514" vertical-offset="0" max-vertical-offset="585">
-          <folding />
         </state>
       </provider>
     </entry>

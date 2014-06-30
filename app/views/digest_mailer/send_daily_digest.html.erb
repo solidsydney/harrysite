@@ -52,7 +52,7 @@
         <td class="divider" colspan="2" bgcolor="#555555" height="2"></td>
       </tr>
 
-      <% Post.blog_posts.recent.each do |post| %>
+      <% Post.blog_posts.recent.limit(12).each do |post| %>
       <tr class="episode">
         <td>
           <a href="<%= url_for post %>">

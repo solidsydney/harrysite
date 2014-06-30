@@ -1,8 +1,7 @@
-namespace :new_subscriber_account do
-  desc "Create account for all subscribers"
-  task :new_user => :environment do
-    Contact.no_account.find_each do |contact|
-      ContactWorker.perform_async(contact.id)
-    end
-  end
+desc "Send Digest"
+task :send_digest_emails => :environment do
+  #Contact.find_each do |contact|
+    contact = Contact.find_by_email("ramzauchenna@gmail.com")
+    DigestWorker.perform_async(contact.id)
+  #end
 end

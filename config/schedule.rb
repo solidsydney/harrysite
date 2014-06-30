@@ -22,3 +22,15 @@
 every 1.day, :at => '4:30 am' do
   rake "sitemap:refresh"
 end
+
+every :monday, :at => '5:30 pm' do
+  rake "send_digest_emails"
+end
+
+every :wednesday, :at => '5:30 am' do
+  rake "send_digest_emails"
+end
+
+every :friday, :at => '5:30 am' do
+  rake "send_digest_emails"
+end

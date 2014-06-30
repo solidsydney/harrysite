@@ -1,0 +1,21 @@
+BlanckDigital - Blanck Digital Magazine
+
+Daily Digest
+
+---------------------------------------------
+<% Post.top_posts.each do |post| %>
+<%= post.title %>
+
+<%= post.summary %>
+
+<%= raw post.categories.map { |tag| link_to category_url(tag), category_url(tag) }.join(" ") %> <%= post.publish_on.to_date.to_s(:long)%>:
+http://blanckdigital.com/posts/<%= post.id %>
+
+---------------------------------------------
+<% end %>
+
+
+Unsubscribe if you do not wish to receive these emails in the future:
+<%= link_to unsubscribe_url(email: @email), unsubscribe_url(email: @email) %>
+
+Copyright <%= Time.zone.now.year%> BlanckDigital

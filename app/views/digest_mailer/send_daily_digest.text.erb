@@ -3,7 +3,7 @@ BlanckDigital - Blanck Digital Magazine
 Daily Digest
 
 ---------------------------------------------
-<% Post.top_posts.each do |post| %>
+<% Post.blog_posts.recent.each do |post| %>
 <%= post.title %>
 
 <%= post.summary %>

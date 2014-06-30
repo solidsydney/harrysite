@@ -52,7 +52,7 @@
       <file leaf-file-name="send_daily_digest.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="28" selection-start="689" selection-end="689" vertical-scroll-proportion="0.6923077" vertical-offset="0" max-vertical-offset="1455">
+            <state line="23" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="1470">
               <folding>
                 <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#0;tag#table#0;tag#body#0;tag#html#0" expanded="false" />
               </folding>
@@ -923,7 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="689" selection-end="689" vertical-scroll-proportion="0.6923077" vertical-offset="0" max-vertical-offset="1455">
+        <state line="23" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="0.5897436" vertical-offset="0" max-vertical-offset="1470">
           <folding>
             <element signature="tag#tr#1;tag#table#0;tag#td#0;tag#tr#0;tag#table#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>

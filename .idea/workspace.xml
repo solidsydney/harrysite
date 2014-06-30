@@ -82,10 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account.rake" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="account.rake" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/tasks/account.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="117" selection-end="117" vertical-scroll-proportion="0.075250834" vertical-offset="0" max-vertical-offset="598">
+            <state line="3" column="5" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/schedule.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="21" selection-start="504" selection-end="504" vertical-scroll-proportion="0.44816053" vertical-offset="32" max-vertical-offset="645">
               <folding />
             </state>
           </provider>
@@ -104,15 +113,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="68" column="48" selection-start="1783" selection-end="1783" vertical-scroll-proportion="-13.75" vertical-offset="690" max-vertical-offset="1500">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="61" selection-start="896" selection-end="896" vertical-scroll-proportion="-6.25" vertical-offset="225" max-vertical-offset="990">
               <folding />
             </state>
           </provider>
@@ -169,7 +169,6 @@
         <option value="$PROJECT_DIR$/app/views/application/_category_menu.html.erb" />
         <option value="$PROJECT_DIR$/app/worker/digest_worker.rb" />
         <option value="$PROJECT_DIR$/app/mailers/digest_mailer.rb" />
-        <option value="$PROJECT_DIR$/config/schedule.rb" />
         <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.text.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css.scss" />
@@ -184,6 +183,7 @@
         <option value="$PROJECT_DIR$/app/models/post.rb" />
         <option value="$PROJECT_DIR$/app/views/digest_mailer/send_daily_digest.html.erb" />
         <option value="$PROJECT_DIR$/lib/tasks/account.rake" />
+        <option value="$PROJECT_DIR$/config/schedule.rb" />
       </list>
     </option>
   </component>
@@ -898,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/schedule.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="26" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/application/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="51" selection-start="86" selection-end="140" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="165">
@@ -1076,7 +1069,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/account.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="117" selection-end="117" vertical-scroll-proportion="0.075250834" vertical-offset="0" max-vertical-offset="598">
+        <state line="3" column="5" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/schedule.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="21" selection-start="504" selection-end="504" vertical-scroll-proportion="0.44816053" vertical-offset="32" max-vertical-offset="645">
           <folding />
         </state>
       </provider>

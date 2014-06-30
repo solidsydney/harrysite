@@ -5,7 +5,8 @@ class Post < ActiveRecord::Base
                         :large => "800x800>",
                         :small => "170x150#",
                         :thumb => "396x324#",
-                        :th_new => "270x280#"
+                        :th_new => "270x280#",
+                        :daily => "200x125#"
                     }
   validates_attachment_content_type :post_image, :content_type => ['image/jpeg', 'image/png', 'image/gif']
   validates_attachment_size :post_image, :less_than => 1.megabyte

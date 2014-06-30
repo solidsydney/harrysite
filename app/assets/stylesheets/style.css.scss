@@ -1286,14 +1286,20 @@ footer .rights{
 }
 
 footer .rights p{
-	float:right;
-	color: #aaa;
+	color: #fff;
 	font-size: 11px;
 
 }
 
 footer .rights p:nth-child(1){
-	float:left;
+	text-align: center;
+    color: #fff;
+    a{
+      color: #fff;
+      &:hover{
+        color: #cccccc;
+      }
+    }
 }
 
 

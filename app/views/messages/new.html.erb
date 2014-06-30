@@ -1,0 +1,53 @@
+<div id="blog_show" class="row-fluid" >
+
+  <div class="span12">
+
+    <section>
+
+      <header>
+        <h1 style="border-bottom: none;">
+          Contact Us
+        </h1>
+      </header>
+
+      <div  class="cover_container ">
+
+        <%= simple_form_for(@message, html: {class: 'form-horizontal'}) do |f| %>
+            <%= f.error_notification %>
+
+            <div class="special_email_field" style="display: none;">
+              <%= label_tag :email %>
+              <%= text_field_tag :email, "", :autocomplete => "off" %>
+              (do not fill)
+            </div>
+
+            <div class="form-inputs">
+              <%= f.input :name, input_html: {class: "span9"} %>
+              <%= f.input :email, :autofocus => true, input_html: {class: "span9"} %>
+              <%= f.input :message, as: :text, input_html: {class: "span9", rows: 6} %>
+            </div>
+
+            <div class="form-actions">
+              <%= f.button :submit, "Send Message" %>
+            </div>
+        <% end %>
+
+
+      </div>
+
+
+
+
+
+
+    </section>
+  </div>
+
+
+
+
+
+
+  <%#= render "posts/sidebar" %>
+
+</div>

@@ -25,6 +25,9 @@ class WelcomeController < ApplicationController
     @video = Post.video_posts.published.recent.first
   end
 
+  def contact_us
+
+  end
 
   def search
     @q = params[:q]

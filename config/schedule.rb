@@ -28,10 +28,10 @@ every :monday, :at => '5:30 pm' do
   rake "send_digest_emails"
 end
 
-every :wednesday, :at => '5:30 am' do
+every :wednesday, :at => '5:30 pm' do
   rake "send_digest_emails"
 end
 
-every :friday, :at => '5:30 am' do
+every :friday, :at => '5:30 pm' do
   rake "send_digest_emails"
 end

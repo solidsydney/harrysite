@@ -58,6 +58,28 @@
               </ul>
             </div>
 
+
+          <div class="accordion-group <%= active_controller("pages") %>">
+            <div class="accordion-heading">
+
+              <a class="accordion-toggle <%= opened_tab("pages") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-pages">
+                <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+                <span>Pages</span>
+
+
+
+                <span class="arrow"></span>
+              </a>
+            </div>
+
+            <ul id="collapse-pages" class="accordion-body collapse nav nav-list collapse <%= in_open("pages")%>">
+
+              <li class="<%= active_controller("pages", "new") %>"><%= link_to "Create page", new_manage_page_url %></li>
+              <li class="<%= active_controller("pages", "index") %>"><%= link_to "Manage pages", manage_pages_url %></li>
+            </ul>
+          </div>
+
+
         <div class="accordion-group <%= active_controller("posts") %>">
           <div class="accordion-heading">
 

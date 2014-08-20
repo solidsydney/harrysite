@@ -1,0 +1,11 @@
+<%= simple_form_for([:manage, @page], html: {class: 'form-horizontal' }) do |f| %>
+
+    <%= f.error_notification %>
+    <fieldset style="margin-top:20px">
+      <%= f.input :title, input_html: {class: "input-xlarge"} %>
+      <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full', 'require' => false}, class: "ckeditor"} %>
+      <div class="form-actions">
+        <%= f.submit class: "btn" %>  or <%= link_to "Cancel", :back %>
+      </div>
+    </fieldset>
+<% end %>

@@ -1,5 +1,8 @@
 require 'sidekiq/web'
 Franka::Application.routes.draw do
+  get "pages/show"
+  resources :pages
+
   get "categories/show"
   get "videos/index"
   get "welcome/index"
@@ -76,6 +79,7 @@ Franka::Application.routes.draw do
        root 'dashboard#index'
        resources :posts
        resources :menus
+       resources :pages
        resources :administrators do
          member do
            get 'change_password'

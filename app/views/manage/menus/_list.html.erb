@@ -1,0 +1,32 @@
+<table class="table table-striped table-bordered dataTable" style="margin-top: 10px;">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Sub menus</th>
+    <th>Position</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @menus.each do |menu| %>
+      <tr>
+        <td><%= link_to menu.name, manage_menu_url(menu) %></td>
+        <td><%= link_to menu.url, menu.url %></td>
+        <td><%= raw menu.descendants.map { |menu| menu.category.present? ? link_to(menu.name, menu.category) : link_to(menu.name, menu.url) }.join(', ') %></td>
+        <td><%= menu.position %></td>
+        <td>
+          <div class="btn-group">
+            <%= link_to  edit_manage_menu_path(menu), class: "btn" do %>
+                <i class="icon-edit"></i>  Edit
+            <% end %>
+            <%= link_to manage_menu_path(menu), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure"} do %>
+                <i class="icon-trash"></i>  Delete
+            <% end %>
+          </div>
+        </td>
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>

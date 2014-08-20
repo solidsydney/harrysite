@@ -33,6 +33,7 @@ gem 'impressionist'
 gem 'chosen-rails'
 gem 'gibbon'
 gem 'sidekiq'
+gem 'ancestry'
 
 
 gem 'sinatra', require: false

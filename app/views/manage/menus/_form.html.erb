@@ -1,0 +1,28 @@
+<%= simple_form_for([:manage, @menu], html: {class: 'form-horizontal' }) do |f| %>
+
+
+    <fieldset style="margin-top:20px">
+    <%= f.input :name, input_html: {class: "input-xlarge"} %>
+    <%= f.input :url, input_html: {class: "input-xlarge"} %>
+    <%= f.input :position, input_html: {class: "input-xlarge"} %>
+
+      <div class="control-group">
+        <%= f.label :parent, class: " control-label" %>
+        <div class="controls">
+          <%= f.collection_select :parent_id, @menus, :id, :display_name, include_blank: true, class: "input-xlarge", prompt: "Add sub menu" %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :category, class: " control-label" %>
+        <div class="controls">
+          <%= f.collection_select :category_id, @categories, :id, :name, include_blank: true, class: "input-xlarge", prompt: "select category" %>
+        </div>
+      </div>
+
+
+    <div class="form-actions">
+      <%= f.submit class: "btn" %>  or <%= link_to "Cancel", :back %>
+    </div>
+    </fieldset>
+<% end %>

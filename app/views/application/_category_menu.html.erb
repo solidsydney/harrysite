@@ -1,22 +1,20 @@
 <nav class="clearfix">
   <a href="" id="menu-button"><i class="fa fa-bars"></i></a>
   <ul class="menu span10 inline">
-    <li><%= link_to "Home", root_url, class: "basic-c" %></li>
-    <li><%= link_to "Magazine", issues_url, class: "basic-c" %></li>
-    <li><%= link_to "Blog", posts_url, class: "basic-c" %></li>
-    <li><%= link_to "Blanck TV", videos_url, class: "basic-c" %></li>
-    <li><%= link_to "Submissions", submissions_url, class: "basic-c" %></li>
-    <% Category.first(2).each do |category| %>
-        <li><%= link_to category.name.titleize, category, class: "basic-c" %></li>
+    <% Menu.order(position: :asc).roots.each do |menu| %>
+        <li <% if menu.descendants.any? %> class="dropdown-submenu"<% end %>>
+          <a href="<%= menu.url.present? ? url_for(menu.url) : "#" %>" class="basic-c"><%= menu.name %></a>
+          <% if menu.descendants.any? %>
+          <ul class="dropdown-menu">
+            <% menu.descendants.each do |menu_item| %>
+                <li>
+                  <%=  menu_item.category.present? ? link_to(menu_item.name, menu_item.category) : link_to(menu_item.name, menu_item.url) %>
+                </li>
+            <% end %>
+          </ul>
+          <% end %>
+        </li>
     <% end %>
-    <li class="dropdown-submenu">
-      <a href="#" class="basic-c">Categories</a>
-      <ul class="dropdown-menu">
-        <% Category.all.each do |category| %>
-            <li><%= link_to category.name.titleize, category_url(category) %></li>
-        <% end %>
-      </ul>
-    </li>
   </ul>
 
   <%= form_tag("/search", class: "form-search", method: :get) do %>

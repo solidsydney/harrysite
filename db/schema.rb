@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613110614) do
+ActiveRecord::Schema.define(version: 20140820213314) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -94,6 +94,18 @@ ActiveRecord::Schema.define(version: 20140613110614) do
     t.string   "url"
     t.boolean  "active",             default: true
   end
+
+  create_table "menus", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ancestry"
+    t.integer  "category_id"
+    t.integer  "position",    default: 0
+  end
+
+  add_index "menus", ["category_id"], name: "index_menus_on_category_id", using: :btree
 
   create_table "news_letters", force: true do |t|
     t.string   "title"

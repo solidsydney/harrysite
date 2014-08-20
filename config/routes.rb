@@ -31,6 +31,7 @@ Franka::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
@@ -74,6 +75,7 @@ Franka::Application.routes.draw do
      namespace :manage do
        root 'dashboard#index'
        resources :posts
+       resources :menus
        resources :administrators do
          member do
            get 'change_password'
@@ -112,4 +114,5 @@ Franka::Application.routes.draw do
   resources :posts
   resources :videos
   mount Sidekiq::Web, at: "/sidekiq"
+  get ':name' => 'categories#show', as: :named_category
 end

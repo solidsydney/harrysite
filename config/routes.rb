@@ -118,5 +118,4 @@ Franka::Application.routes.draw do
   resources :posts
   resources :videos
   mount Sidekiq::Web, at: "/sidekiq"
-  get ':name' => 'categories#show', as: :named_category
 end

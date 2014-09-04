@@ -16,7 +16,7 @@
 //= require bootstrap
 //= require jquery.stellar
 //= require jquery-migrate-1.2.1
-//= require masonry
+
 //= require jquery.countdown
 //= require fluidvids
 //= require retina-1.1.0.min
@@ -33,15 +33,12 @@
 //= require jquery.easing
 //= require jquery.mousewheel
 
-
 $(function(){
     $('.flexslider').flexslider({
         animation: "slide",
         controlNav: false
     });
 });
-
-
 
 
 

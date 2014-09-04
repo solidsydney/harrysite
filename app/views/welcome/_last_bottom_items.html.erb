@@ -1,3 +1,16 @@
-<%= render partial: "welcome/three_post", collection: @last_bottom_posts, as: :post %>
+<div class="row-fluid" >
+  <!--CATEGORY SECTION-->
+  <div class="span12">
+    <h3 <% unless mobile_device? %> style="margin-top: 0" <% end %>>More from Blanck Page</h3>
+    <div class="row-fluid">
+      <%= render partial: "welcome/three_post", collection: @last_bottom_posts, as: :post %>
+    </div>
+    <!--TABS-->
 
+    <!--END TABS-->
+  </div>
+  <!--END CATEGORY SECTION-->
+
+  <!--END SIDEBAR-->
+</div>
 

@@ -1,6 +1,7 @@
 class Manage::PostsController < Manage::BaseController
   skip_before_action :ensure_administrators
   before_action :ensure_administrators_or_editor
+  cache_sweeper :post_sweeper
   def index
     if current_user.admin?
      @posts = Post.order("created_at desc")

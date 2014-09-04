@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+  caches_page :index
 =begin
   def index
     @mags = Issue.order(created_at: :desc)

@@ -34,6 +34,9 @@ gem 'chosen-rails'
 gem 'gibbon'
 gem 'sidekiq'
 gem 'ancestry'
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+gem 'rails-observers'
 
 
 gem 'sinatra', require: false

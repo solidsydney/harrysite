@@ -1,6 +1,6 @@
 require 'sidekiq/web'
 Franka::Application.routes.draw do
-  get "pages/show"
+  get "posts/page/:page" => "posts#index"
   resources :pages
 
   get "categories/show"

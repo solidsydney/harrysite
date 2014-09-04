@@ -1,7 +1,6 @@
 <article class="span4 mid">
   <div class="img">
     <%= link_to image_tag(post.post_image(:th_new)), post %>
-    <div class="overlay"></div>
     <div class="info <% if post == @top_posts.last %>info-star<% end %>">
       <% unless post == @top_posts.last %>
           <p class="tags">

@@ -398,7 +398,7 @@ article.mid h1{
 	font-size: 18px;
 	margin:8px 0 0;
 	line-height: 18px;
-	letter-spacing: -1px;
+	letter-spacing: 3px;
 }
 
 article.mid .details,
@@ -1753,6 +1753,7 @@ form [class*="span"]{
 	line-height: 30px;
 	margin: 0 0 10px;
 	text-transform: uppercase;
+    font-family: PerpetuaTitlingMTW01-Li;
 }
 
 .post-page article.post.fullwidth h1{

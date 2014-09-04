@@ -1089,3 +1089,21 @@ nav .form-search{
   }
 }
 
+article{
+ position: relative;
+}
+
+.info-star{
+  position: absolute;
+  top: 106px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 86%;
+  color: #fff;
+  h1{
+    a{
+      color: #fff;
+    }
+  }
+}
+

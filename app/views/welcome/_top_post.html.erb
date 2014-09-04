@@ -2,19 +2,20 @@
   <div class="img">
     <%= link_to image_tag(post.post_image(:th_new)), post %>
     <div class="overlay"></div>
+    <div class="info <% if post == @top_posts.last %>info-star<% end %>">
+      <% unless post == @top_posts.last %>
+          <p class="tags">
+            <%= raw post.categories.map { |tag| link_to tag.name, category_url(tag) }.join(" ") %>
+          </p>
+      <% end %>
+      <h1><%= link_to post.title, post, title: post.title %></h1>
+      <% unless post == @top_posts.last %>
+          <p class="details"><%= post.publish_on.to_date.to_s(:long)%> | <%= link_to "BlanckDigital", root_url%></p>
+          <p class="text">
+            <%= truncate post.summary, length: 120 %>
+      <% end %>
+      </p>
+    </div>
   </div>
-  <div class="info">
-    <% unless post == @top_posts.last %>
-    <p class="tags">
-      <%= raw post.categories.map { |tag| link_to tag.name, category_url(tag) }.join(" ") %>
-    </p>
-    <% end %>
-    <h1><%= link_to post.title, post, title: post.title %></h1>
-    <% unless post == @top_posts.last %>
-    <p class="details"><%= post.publish_on.to_date.to_s(:long)%> | <%= link_to "BlanckDigital", root_url%></p>
-    <p class="text">
-    <%= truncate post.summary, length: 120 %>
-    <% end %>
-    </p>
-  </div>
+
 </article>

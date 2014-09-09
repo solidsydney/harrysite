@@ -4,9 +4,9 @@ class Manage::PostsController < Manage::BaseController
   cache_sweeper :post_sweeper
   def index
     if current_user.admin?
-     @posts = Post.order("created_at desc")
+     @posts = Post.order("created_at desc").page(params[:page]).per_page(27)
     else
-     @posts = current_user.posts.order("created_at desc")
+     @posts = current_user.posts.order("created_at desc").page(params[:page]).per_page(27)
     end
   end
 

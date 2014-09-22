@@ -11,7 +11,7 @@
   <tbody>
   <% @menus.each do |menu| %>
       <tr>
-        <td><%= link_to menu.name, manage_menu_url(menu) %></td>
+        <td><%= link_to menu.name, menu.url %></td>
         <td><%= link_to menu.url, menu.url %></td>
         <td><%= raw menu.descendants.map { |menu| link_to(menu.name, edit_manage_menu_path(menu))  }.join(', ') %></td>
         <td><%= menu.position %></td>

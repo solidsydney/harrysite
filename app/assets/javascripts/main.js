@@ -20,7 +20,7 @@ $( document ).ready(function() {
 		
 	};
 
-	var initSliders = function(){
+	/*var initSliders = function(){
 		$('.news').bxSlider({
 		  speed: 3000,
 		  touchEnabled: true,
@@ -67,7 +67,7 @@ $( document ).ready(function() {
 				  pause: 4000
 				});
 		}
-	}
+	}*/
 
 
 
@@ -76,7 +76,7 @@ $( document ).ready(function() {
 		if(width>767){
 	  		countBackgroundSpeed();
 	  	};
-	  	initSliders();
+	  	/*initSliders();*/
 	});
 	
 	$('#myTab a').click(function (e) {

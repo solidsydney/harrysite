@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820215512) do
+ActiveRecord::Schema.define(version: 20140922083209) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -119,6 +119,21 @@ ActiveRecord::Schema.define(version: 20140820215512) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "post_entries", force: true do |t|
+    t.string   "title"
+    t.text     "summary"
+    t.text     "body"
+    t.string   "name"
+    t.string   "email"
+    t.boolean  "active",                   default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "entry_cover_file_name"
+    t.string   "entry_cover_content_type"
+    t.integer  "entry_cover_file_size"
+    t.datetime "entry_cover_updated_at"
   end
 
   create_table "posts", force: true do |t|

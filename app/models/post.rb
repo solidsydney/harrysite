@@ -21,6 +21,7 @@ class Post < ActiveRecord::Base
   scope :front_video_posts, -> { where(post_type: "Video").limit(4) }
   belongs_to :user
 
+
   validates :title, :post_type, :presence => true
   validates :body, presence: true, if: :blog_post
 

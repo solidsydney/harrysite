@@ -1,0 +1,15 @@
+<%= provide :title, "New Submission" %>
+
+<article class="post mid fullwidth">
+  <div class="info">
+    <h1>New Submission</h1>
+    <div class="data">
+      <p class="details"><%= Time.now.to_date.to_s(:long)%></p>
+
+    </div>
+    <div class="text">
+      <%= render "form" %>
+    </div>
+  </div>
+</article>
+

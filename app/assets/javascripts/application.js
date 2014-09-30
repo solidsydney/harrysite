@@ -33,6 +33,7 @@
 //= require jquery.easing
 //= require jquery.mousewheel
 
+
 $(function(){
     $('.flexslider').flexslider({
         animation: "slide",

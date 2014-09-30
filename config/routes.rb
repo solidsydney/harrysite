@@ -1,5 +1,7 @@
 require 'sidekiq/web'
 Franka::Application.routes.draw do
+  resources :post_entries
+
   get "posts/page/:page" => "posts#index"
   resources :pages
 
@@ -109,6 +111,11 @@ Franka::Application.routes.draw do
     member do
       get 'show_pdf'
     end
+  end
+
+  namespace :blanckpage do
+    root "post_entries#index"
+    resources :post_entries
   end
 
   get "unsubscribe/:email" => "contacts#unsubscribe_mail_chimp_email", as: :unsubscribe

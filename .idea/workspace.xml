@@ -460,7 +460,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../publisher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hotel-app" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -917,10 +917,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.375" vertical-offset="108" max-vertical-offset="3315">
           <caret line="35" column="157" selection-start-line="35" selection-start-column="157" selection-end-line="35" selection-end-column="157" />
-          <folding>
-            <element signature="tag#div#6;tag#div#0;tag#section#0;tag#div#0;tag#div#0;tag#aside#0" expanded="false" />
-            <element signature="tag#div#10;tag#div#0;tag#section#0;tag#div#0;tag#div#0;tag#aside#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -945,9 +942,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.75" vertical-offset="429" max-vertical-offset="990">
           <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

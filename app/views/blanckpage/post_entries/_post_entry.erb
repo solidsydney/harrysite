@@ -1,30 +1,13 @@
-<div class=" item cover">
-  <div class="post">
-
-    <a class="article_thumb">
-      <%= image_tag post_entry.entry_cover(:thumb)%>
-    </a>
-    <div class="aricle_ref_box caption">
-      <header class="heading_blog">
-        <h2>
-          <a href="<%= url_for post_entry %>" class="transitionable">
-            <%= post_entry.title %>
-          </a>
-        </h2>
-      </header>
-
-      <p class="blog_meta">posted in
-        <a  class="transitionable category" href="#">
-          <span>Blanck Page</span>
-        </a>
-        <span class="date"> on&nbsp;&nbsp; <%= post_entry.created_at.to_date.to_s(:long)%>
-          | <a href="<%= url_for post_entry %>#disqus_thread" class="transitionable"></a>
-        </span>
-      </p>
-
-      <p>
-        <%= post_entry.summary %>
-      </p>
-    </div>
+<article class="span4 mid">
+  <div class="img">
+    <%= link_to image_tag(post_entry.entry_cover(:th_new)), post_entry %>
   </div>
-</div>
+  <div class="info">
+    <h1><%= link_to truncate(post_entry.title, length: 30, omission: ".."), [:blanckpage, post_entry], title: post_entry.title %></h1>
+    <p class="details"><%= post_entry.created_at.to_date.to_s(:long)%> | <%= link_to post_entry.name, [:blanckpage, post_entry]%></p>
+    <p class="text">
+      <%= truncate post_entry.summary, length: 150 %>
+    </p>
+  </div>
+
+</article>

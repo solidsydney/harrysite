@@ -1,18 +1,21 @@
 <%= tinymce_assets %>
-<%= simple_form_for(@post_entry) do |f| %>
+
+<%= simple_form_for([:blanckpage, @post_entry]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :summary %>
-    <%= f.input :body, input_html: {:class => "tinymce"} %>
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :active %>
+    <%= f.input :title, input_html: {:class => "col-md-12"} %>
+    <%= f.input :summary, input_html: {:class => "col-md-12"} %>
+    <%= f.input :body, input_html: {:class => "tinymce", rows: 12} %>
+    <%= f.input :name, input_html: {:class => "col-md-12"} %>
+    <%= f.input :email, input_html: {:class => "col-md-12"} %>
+    <%= f.input :entry_cover, as: :file, label: "Cover Image" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, "Submit" %>
   </div>
 <% end %>
+
+<%= tinymce %>
 

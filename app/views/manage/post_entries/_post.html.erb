@@ -1,0 +1,23 @@
+<div class="media social-box">
+  <div class="header">
+    <h4><%= post.title %></h4>
+  </div>
+  <div class="media-body social-body">
+    <% if post.post_image.present? %>
+        <div class="social-share-image" style="text-align: center;">
+            <%= image_tag post.post_image(:large) %>
+        </div>
+    <% end %>
+    <div class="body">
+      <%= post.summary %>...
+      <p>
+        <b>Published: <%= post.publish_on.to_date.to_s(:long) %></b> | <small>Created:<%= time_ago_in_words post.created_at %> ago <i class="icon-globe"></i></small>
+      </p>
+      <div class="btn-group hidden-phone">
+        <%= link_to "read more", manage_post_path(post), class: "btn" %>
+        <%= link_to "Edit", edit_manage_post_path(post), class: "btn btn-info" %>
+        <%= link_to "Delete", manage_post_path(post), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure you want to delete this post"} %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,27 @@
           </div>
         </div>
         <% if current_user.admin? %>
+
+          <div class="accordion-group <%= active_controller("categories") %>">
+            <div class="accordion-heading">
+
+              <a class="accordion-toggle <%= opened_tab("post_entries") %>" data-toggle="collapse" data-parent="#accordion2" href="#collapse-post_entries">
+                <%#= image_tag "icons/stuttgart-icon-pack/32x32/sitemap.png" %>
+                <span>Submissions</span>
+
+
+
+                <span class="arrow"></span>
+              </a>
+            </div>
+
+            <ul id="collapse-post_entries" class="accordion-body collapse nav nav-list collapse <%= in_open("post_entries")%>">
+              <li class="<%= active_controller("post_entries", "approved") %>"><%= link_to "Approved Submissions", manage_post_entries_path(status: "approved") %></li>
+              <li class="<%= active_controller("post_entries", "pending") %>"><%= link_to "Pending Submissions", manage_post_entries_url(status: "pending") %></li>
+            </ul>
+          </div>
+
+
         <div class="accordion-group <%= active_controller("users") %>">
           <div class="accordion-heading">
 

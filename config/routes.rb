@@ -82,6 +82,11 @@ Franka::Application.routes.draw do
        resources :posts
        resources :menus
        resources :pages
+       resources :post_entries do
+         member do
+           post 'approve'
+         end
+       end
        resources :administrators do
          member do
            get 'change_password'

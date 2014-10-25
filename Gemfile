@@ -38,6 +38,7 @@ gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'
 gem 'rails-observers'
 gem 'tinymce-rails', '~> 4.1.5'
+gem 'masonry-rails'
 
 
 

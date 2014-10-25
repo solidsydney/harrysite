@@ -44,7 +44,7 @@
 <div class="main post-page">
 <div class="row-fluid" <% unless mobile_device? %> style="margin-bottom: 0" <% end %>>
 <!--CONTENT-->
-<div class="posts span9">
+<div class="posts span12">
   <% if flash.any? %>
       <% flash.each do |name, msg| %>
           <div class="alert alert-<%= name == :notice ? "info" : "error" %>">
@@ -57,7 +57,7 @@
 <!--END CONTENT-->
 
 <!--SIDEBAR-->
-<%= render "sidebar"%>
+
 <!--END SIDEBAR-->
 </div>
 

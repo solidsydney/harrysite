@@ -1,0 +1,20 @@
+var $container = $('#masonry-container');
+
+$container.imagesLoaded(function(){
+    $container.masonry({
+        itemSelector: '.box',
+        isAnimated: !Modernizr.csstransitions
+    });
+});
+
+var $boxes = $("<%= j render @posts %>");
+$boxes.imagesLoaded(function() {
+  $('#masonry-container').append( $boxes ).masonry( 'appended', $boxes );
+});
+
+<% if @posts.next_page %>
+$('.pager').prepend('<%= j(render "page_nav", posts: @posts)%>');
+<% else %>
+$('.pager').hide();
+<% end %>
+

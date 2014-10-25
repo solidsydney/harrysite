@@ -1,16 +1,12 @@
 <%= provide :title, "Blanck Page"%>
 <h3>Blog</h3>
-<% @posts.in_groups_of(3, false) do |row_post|%>
-    <div class="row-fluid">
-      <% row_post.each do |post| %>
-          <%= render "categories/post", post: post%>
-      <% end %>
-    </div>
-<% end %>
-<div class="pagination">
-  <ul>
-    <%= will_paginate(@posts)%>
-  </ul>
+<div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
+  <%= render @posts  %>
+</div>
+
+
+<div class="pager">
+  <%= render "page_nav", posts: @posts %>
 </div>
 
 <!--END CONTENT-->

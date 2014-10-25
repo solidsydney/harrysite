@@ -1,52 +1,23 @@
+<div class="post-slider span6">
+  <div class="">
+    <% if @mags.any? %>
+        <section class="slider cover">
+          <div class="flexslider" style="margin-bottom: 31px;">
+            <ul class="slides">
+              <% @mags.each do |mag| %>
+                  <li>
 
-<!--
-<div class="post-slider span8">
-  <div class="controls">
-    <% if Slider.recent.size > 1 %>
-    <p class="prev"><i class="fa fa-angle-left"></i><a class="bx-prev" href="">Prev</a></p>
-    <p class="next"><i class="fa fa-angle-right"></i><a class="bx-next" href="">Next</a></p>
+                    <a href="<%= url_for mag%>">
+                      <%= image_tag mag.cover(:large) %>
+                    </a>
+                  </li>
+              <% end %>
+
+            </ul>
+          </div>
+        </section>
+
     <% end %>
+    <h3 style="text-align: center;">More from Blanck</h3>
   </div>
-  <div class="bx-wrapper" style="max-width: 100%; margin: 0px auto;">
-    <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 462px;">
-      <div class="slides" style="width: 515%; position: relative; -webkit-transition: 0s; transition: 0s; -webkit-transform: translate3d(-1719px, 0px, 0px);">
-    <% Slider.recent.each do |slider| %>
-      <article class="big clearfix" style="float: left; list-style: none; position: relative; width: 573px;">
-      <%= image_tag slider.slide(:trend_small) %>
-      <div class="info" style="display: block;">
-
-        <h1><%= link_to slider.name.titleize, slider.url %></h1>
-        <p class="text">
-         <%= slider.caption %>
-         </p>
-      </div>
-    </article>
-    <% end %>
-</div></div><div class="bx-controls"></div></div>
-</div>
--->
-
-
-
-<div class="post-slider span8">
-<div class="">
-  <% if @mags.any? %>
-      <section class="slider cover">
-        <div class="flexslider">
-          <ul class="slides">
-            <% @mags.each do |mag| %>
-            <li>
-
-              <a href="<%= url_for mag%>">
-                <%= image_tag mag.cover(:large) %>
-              </a>
-            </li>
-            <% end %>
-
-          </ul>
-        </div>
-      </section>
-
-  <% end %>
-</div>
 </div>

@@ -1,17 +1,14 @@
 <%= provide :title, "#{@category.name}"%>
 
 <h3><%= @category.name %></h3>
-<% @posts.in_groups_of(3, false) do |row_post|%>
-<div class="row-fluid">
-  <% row_post.each do |post| %>
-    <%= render "post", post: post%>
-  <% end %>
+
+<div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
+  <%= render @posts  %>
 </div>
-<% end %>
-<div class="pagination">
-  <ul>
-    <%= will_paginate(@posts)%>
-  </ul>
+
+
+<div class="pager">
+  <%= render "page_nav", posts: @posts %>
 </div>
 
 <!--END CONTENT-->

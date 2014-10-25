@@ -1,6 +1,6 @@
-<article class="col3 mid box">
+<article class="span3 mid box">
   <div class="img">
-    <%= link_to image_tag(post.post_image(:croped)), post %>
+    <%= link_to image_tag(post.post_image(:th_new)), post %>
   </div>
   <div class="info">
     <p class="tags">
@@ -9,12 +9,7 @@
     <h1><%= link_to truncate(post.title, length: 30, omission: ".."), post, title: post.title %></h1>
     <p class="details"><%= post.publish_on.to_date.to_s(:long)%> | <%= link_to "BlanckDigital", root_url%></p>
     <p class="text">
-      <% if post.post_type == "Video" %>
-          <iframe id="ytplayer" type="text/html" width="100%" height="auto" src="http://www.youtube.com/embed/<%= post.video_url %>" allowfullscreen frameborder="0">
-          </iframe>
-      <% else %>
-          <%= truncate post.summary, length: 150 %>
-      <% end %>
+      <%= truncate post.summary, length: 150 %>
     </p>
   </div>
 

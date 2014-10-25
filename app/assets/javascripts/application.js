@@ -32,12 +32,30 @@
 //= require shBrushJScript
 //= require jquery.easing
 //= require jquery.mousewheel
+//= require masonry/jquery.masonry
+//= require masonry/jquery.event-drag
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/jquery.infinitescroll.min
+//= require masonry/modernizr-transitions
+//= require categories
 
 
 $(function(){
     $('.flexslider').flexslider({
         animation: "slide",
         controlNav: false
+    });
+});
+
+$(function(){
+
+    var $container = $('#masonry-container');
+
+    $container.imagesLoaded(function(){
+        $container.masonry({
+            itemSelector: '.box',
+            isAnimated: !Modernizr.csstransitions
+        });
     });
 });
 

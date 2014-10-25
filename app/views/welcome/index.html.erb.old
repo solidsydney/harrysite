@@ -1,0 +1,33 @@
+<div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
+
+  <div class="box col3">
+    ...
+  </div>
+
+  <div class="box col1">
+    <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p>
+  </div>
+
+  <div class="box col2">
+    <p>
+      <a href="http://www.flickr.com/photos/nemoorange/3319714470/" title="Whitlow's on Wilson by nemoorange, on Flickr"><img src="http://farm4.static.flickr.com/3008/3319714470_c05a5cb5a8_m.jpg" alt="Whitlow's on Wilson" /></a>
+    </p>
+  </div>
+
+
+<%= render "cover"%>
+
+<% if @top_posts.any? %>
+   <%= render partial: "top_post", collection: @top_posts, as: :post%>
+<% end %>
+
+</div>
+<div class="row-fluid">
+  <%= render partial: "three_post", collection: @three_posts, as: :post %>
+</div>
+<div class="row-fluid">
+  <%= render "three_post", post: @last_post %>
+  <%= render "video_post", video: @video%>
+</div>
+<%= render "bottom_items" %>
+<%= render "last_bottom_items" %>

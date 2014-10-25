@@ -3,7 +3,9 @@
 <h3><%= @category.name %></h3>
 
 <div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
-  <%= render @posts  %>
+  <% cache(action: 'show', action_suffix: @category.name ) do %>
+    <%= render @posts  %>
+  <% end %>
 </div>
 
 

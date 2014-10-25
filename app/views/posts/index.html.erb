@@ -1,11 +1,13 @@
 <%= provide :title, "Blanck Page"%>
 <h3>Blog</h3>
 <div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
-  <%= render @posts  %>
+  <% cache(action: 'index', action_suffix: 'all_posts') do %>
+    <%= render @posts  %>
+  <% end %>
 </div>
 
 
-<div class="pager" style="display: none;">
+<div class="pager" style="border-top: none;">
   <%= render "page_nav", posts: @posts %>
 </div>
 

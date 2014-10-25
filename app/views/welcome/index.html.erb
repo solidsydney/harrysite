@@ -4,7 +4,9 @@
 </div>
 
 <div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
-  <%= render @more_posts unless @more_posts.nil? %>
+  <% cache(action: 'index', action_suffix: 'welcome_posts') do %>
+    <%= render @more_posts unless @more_posts.nil? %>
+  <% end %>
 </div>
 
 

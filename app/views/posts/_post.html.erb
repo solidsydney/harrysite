@@ -6,7 +6,7 @@
     <p class="tags">
       <%= raw post.categories.map { |tag| link_to tag.name, category_path(tag) }.join(" ") %>
     </p>
-    <h1><%= link_to truncate(post.title, length: 30, omission: ".."), post, title: post.title %></h1>
+    <h1><%= link_to post.title, post, title: post.title %></h1>
     <p class="details"><%= post.publish_on.to_date.to_s(:long)%> | <%= link_to "BlanckDigital", root_url%></p>
     <p class="text">
       <% if post.post_type == "Video" %>

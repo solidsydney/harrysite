@@ -1,6 +1,7 @@
 <div class="row-fluid">
   <%= render 'cover' %>
-  <%= render partial: "top_posts", collection: @top_posts, as: :post %>
+  <%= render partial: "top_posts", collection: @top_posts[0..1], as: :post %>
+  <%= render partial: "top_posts", collection: @top_posts[2..3], as: :post %>
 </div>
 
 <div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">

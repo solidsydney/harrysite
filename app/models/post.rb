@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
   scope :blog_posts, -> { where(post_type: "Blog") }
   scope :top_posts, -> { where(post_type: "Blog").order("impressions_count desc").limit(12) }
   scope :video_posts, -> { where(post_type: "Video")}
-  scope :recent,  -> {order("publish_on desc")}
+  scope :recent,  -> {order("created_at desc")}
   scope :front_video_posts, -> { where(post_type: "Video").limit(4) }
   belongs_to :user
 

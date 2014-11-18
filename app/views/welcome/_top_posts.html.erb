@@ -3,7 +3,13 @@
     <%= link_to image_tag(post.post_image(:th_new)), post %>
   </div>
   <div class="info">
-    <h1><%= link_to truncate(post.title, length: 100, omission: ".."), post, title: post.title %></h1>
+    <p class="tags">
+      <%= raw post.categories.first(2).map { |tag| link_to tag.name, category_path(tag) }.join(" ") %>
+    </p>
+    <h1><%= link_to truncate(post.title, length: 22, omission: ".."), post, title: post.title %></h1>
+    <p class="text">
+      <%= truncate post.summary, length: 65 %>
+    </p>
   </div>
 
 </article>

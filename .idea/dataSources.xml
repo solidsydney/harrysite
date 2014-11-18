@@ -5,23 +5,19 @@
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/franka</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails franka: test" uuid="43de5820-0867-48d0-b7b5-aa8666201be3">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/franka_test</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails franka: production" uuid="34692aa8-bf88-4271-9349-58cd8ae4e546">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/franka</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
   </component>
 </project>
-

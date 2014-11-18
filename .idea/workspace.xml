@@ -48,8 +48,8 @@
       <file leaf-file-name="_top_posts.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/_top_posts.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19292605" vertical-offset="0" max-vertical-offset="622">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.12057878" vertical-offset="0" max-vertical-offset="622">
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -834,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/_top_posts.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19292605" vertical-offset="0" max-vertical-offset="622">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.12057878" vertical-offset="0" max-vertical-offset="622">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
           <folding />
         </state>
       </provider>

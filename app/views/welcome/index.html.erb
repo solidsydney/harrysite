@@ -1,6 +1,10 @@
 <div class="row-fluid">
   <%= render 'cover' %>
-  <%= render partial: "top_posts", collection: @top_posts, as: :post %>
+  <% @top_posts.in_groups_of(2, false) do |row_posts|%>
+      <div>
+        <%= render partial: "top_posts", collection: row_posts, as: :post %>
+      </div>
+  <% end %>
 </div>
 
 <div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">

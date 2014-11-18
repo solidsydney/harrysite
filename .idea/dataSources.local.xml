@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails franka: development" uuid="228b23c4-f9e0-4a90-8dbf-9afef5f385ea">
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="Rails franka: test" uuid="43de5820-0867-48d0-b7b5-aa8666201be3">
+      <user-name>root</user-name>
+    </data-source>
+    <data-source name="Rails franka: production" uuid="34692aa8-bf88-4271-9349-58cd8ae4e546">
+      <user-name>root</user-name>
+    </data-source>
+  </component>
+</project>

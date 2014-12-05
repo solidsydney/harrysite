@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @mags = Issue.order(created_at: :desc)
+    @mags = Issue.order(created_at: :desc).limit(4)
     @posts = Post.published.recent.page(params[:page]).per_page(27)
     @top_posts = @posts[0..3]
     @more_posts = @posts[4..27]

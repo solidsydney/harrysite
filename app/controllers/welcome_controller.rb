@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
 
   def index
     @mags = Issue.order(created_at: :desc).limit(4)
-    @posts = Post.published.recent.page(params[:page]).per_page(27)
+    @posts = Post.recent.page(params[:page]).per_page(27)
     @top_posts = @posts[0..3]
     @more_posts = @posts[4..27]
     respond_to do |format|
@@ -32,6 +32,6 @@ class WelcomeController < ApplicationController
 
   def search
     @q = params[:q]
-    @results = Post.published.where("title LIKE ? OR body LIKE ?", "%#{@q}%", "%#{@q}%").page(params[:page]).per_page(27)
+    @results = Post.where("title LIKE ? OR body LIKE ?", "%#{@q}%", "%#{@q}%").page(params[:page]).per_page(27)
   end
 end

@@ -4,7 +4,7 @@ require "whenever/capistrano"
 require "sidekiq/capistrano"
 
 
-server "208.68.37.172", :web, :app, :db, primary: true
+server "178.62.13.215", :web, :app, :db, primary: true
 
 set :application, "franka"
 set :user, "deployer"

@@ -14,7 +14,6 @@ class Post < ActiveRecord::Base
   validates_attachment_presence :post_image
 
   validates :title, :summary, :presence => true
-  scope :published, -> { where('publish_on <= ? AND publish_on IS NOT NULL', Time.now.utc) }
   scope :blog_posts, -> { where(post_type: "Blog") }
   scope :top_posts, -> { where(post_type: "Blog").order("impressions_count desc").limit(12) }
   scope :video_posts, -> { where(post_type: "Video")}
@@ -44,7 +43,7 @@ class Post < ActiveRecord::Base
 
 
   def self.search_published(query, tag_id = nil)
-    published.primitive_search(query)
+    primitive_search(query)
   end
 
   def self.primitive_search(query, join = "AND")
@@ -56,12 +55,9 @@ class Post < ActiveRecord::Base
   end
 
   def similar_stories
-    self.class.published.limit(3).primitive_search(title, "OR")
+    primitive_search(title, "OR")
   end
 
-  def published?
-    published_at <= Time.zone.now
-  end
 
   private
 

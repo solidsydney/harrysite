@@ -14,7 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery.ui.all
+//= require jquery-ui
 //= require twitter/bootstrap
 //= require jquery.slimscroll.min
 //= require extents

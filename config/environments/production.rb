@@ -101,8 +101,8 @@ Franka::Application.configure do
       :address        => 'smtp.sendgrid.net',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => 'Blanck magazine',
-      :password       => 'workstation100',
+      :user_name      => 'ekerete@akpan.net',
+      :password       => 'Binary-m0de',
       :domain         => 'blanckdigital.com'
   }
 

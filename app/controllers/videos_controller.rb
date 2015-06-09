@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
   def index
-    @videos = Post.video_posts.published.recent.page(params[:page]).per_page(27)
+    @videos = Post.video_posts.recent.page(params[:page]).per_page(27)
   end
 
   def show

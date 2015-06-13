@@ -6,7 +6,9 @@
   <div class="info">
     <h1><%= @post.title%></h1>
     <div class="data">
+      <% if @post.publish_on.present? %>
       <p class="details"><%= @post.publish_on.to_date.to_s(:long)%></p>
+      <% end %>
 
     </div>
     <div class="text">

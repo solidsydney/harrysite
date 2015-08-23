@@ -49,6 +49,9 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capistrano-sidekiq (0.5.3)
+      capistrano
+      sidekiq
     celluloid (0.16.0)
       timers (~> 4.0.0)
     chosen-rails (1.4.1)
@@ -281,6 +284,7 @@ DEPENDENCIES
   actionpack-page_caching
   ancestry
   capistrano (~> 2.15.5)
+  capistrano-sidekiq
   chosen-rails
   ckeditor!
   coffee-rails (~> 4.0.0)

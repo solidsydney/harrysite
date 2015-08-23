@@ -33,6 +33,7 @@ gem 'impressionist'
 gem 'chosen-rails'
 gem 'gibbon'
 gem 'sidekiq'
+gem "capistrano-sidekiq"
 gem 'ancestry'
 gem 'actionpack-page_caching'
 gem 'actionpack-action_caching'

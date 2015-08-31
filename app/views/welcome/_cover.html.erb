@@ -7,7 +7,7 @@
               <% @mags.each do |mag| %>
                   <li>
 
-                    <a href="http://www.magzter.com/GB/The-Mayten-Company/Blanck-Magazine/Fashion/104802">
+                    <a href="<%= url_for mag.mag_url %>">
                       <%= image_tag mag.cover(:large) %>
                     </a>
                   </li>

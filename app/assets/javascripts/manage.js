@@ -21,7 +21,6 @@
 //= require sidebar
 //= require jquery.gritter.min
 //= require jquery.pulsate.min
-//= require ckeditor/override
 //= require ckeditor/init
 //= require manage/posts
 //= require chosen-jquery

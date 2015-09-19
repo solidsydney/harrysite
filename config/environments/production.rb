@@ -64,6 +64,7 @@ Franka::Application.configure do
     manage.js
     admin.css
     mobile.css
+    ckeditor/*
     *.png *.jpg *.jpeg *.gif
   ]
 

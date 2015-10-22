@@ -4,7 +4,7 @@
   <meta charset="UTF-8"><!--
   <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
-  <title><%= content_for?(:title) ? yield(:title) : "School" %> - Blanck Digital</title>
+  <title><%= content_for?(:title) ? yield(:title) : "HarryFieldschools" %> </title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="viewport" content="width=device-width">
@@ -47,13 +47,7 @@
       <div class="container">
         <a class="logo" href="#wrapper"></a>
         <span></span>
-        <ul class="nav right">
-          <li><a href="#about">about</a></li>
-          <li><a href="#filter">project</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">SignUp</a></li>
-
-        </ul>
+        <%= render "nav"%>
       </div>
     </nav>
   </div>

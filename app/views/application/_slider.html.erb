@@ -20,27 +20,7 @@
     <div class="container">
       <a class="logo" href="#wrapper"></a>
       <span></span>
-      <ul class="nav right">
-        <% Menu.order(position: :asc).roots.each do |menu| %>
-            <li <%# if menu.descendants.any? %>>
-              <a href="<%= menu.url.present? ? url_for(menu.url) : "#" %>" class="basic-c"><%= menu.name %></a>
-             <!-- <%# if menu.descendants.any? %>
-                  <ul class="dropdown-menu">
-                    <%# menu.descendants.each do |menu_item| %>
-                        <li>
-                          <%#=  menu_item.category.present? ? link_to(menu_item.name, menu_item.category) : link_to(menu_item.name, menu_item.url) %>
-                        </li>
-                    <%# end %>
-                  </ul>
-              <%# end %>
-              -->
-            </li>
-        <% end %>
-        <li><a href="http://erp.harryfieldschools.com" target="_blank">Login</a></li>
-        <li>
-          <%= link_to "SignUp", new_user_registration_url %>
-
-      </ul>
+     <%= render "nav"%>
     </div>
   </nav>
 </header>

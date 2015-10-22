@@ -5,7 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'mysql2'
+
+gem 'mysql2', '~> 0.3.18'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -21,7 +22,7 @@ gem 'less-rails'
 gem 'jquery-ui-rails'
 gem 'devise'
 gem 'gritter'
-gem "ckeditor", git: 'git://github.com/galetahub/ckeditor.git'
+gem "ckeditor", git: 'https://github.com/galetahub/ckeditor.git'
 gem "jquery-turbolinks", "~> 2.0.1"
 gem 'paperclip'
 gem 'will_paginate'

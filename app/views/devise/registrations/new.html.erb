@@ -1,49 +1,21 @@
 
 
 
-<div id="blog_show" class="row-fluid" >
-
-  <div class="span12">
-
-    <section>
-
-      <header>
-          <h1 style="border-bottom: none;">
-            Sign Up
-          </h1>
-      </header>
-
-      <div  class="cover_container ">
 
 
-        <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class:"form-horizontal"}) do |f| %>
-            <%= f.error_notification %>
-
-            <div class="form-inputs">
-              <%= f.input :first_name, :required => true, input_html: {class: "span9"} %>
-              <%= f.input :last_name, :required => true, input_html: {class: "span9"}  %>
-              <%= f.input :email, :required => true, :autofocus => true, input_html: {class: "span9"}  %>
-              <%= f.input :password, :required => true, input_html: {class: "span9"}  %>
-              <%= f.input :password_confirmation, :required => true, input_html: {class: "span9"}  %>
-            </div>
-
-            <div class="form-actions">
-              <%= f.button :submit, "Sign up" %>
-            </div>
-        <% end %>
-
-        <%= render "devise/shared/links" %>
-
-      </div>
-
-
-
-
-
-
-    </section>
-  </div>
-
-</div>
-
-
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class:"basic-grey"}) do |f| %>
+  <h1>Sign Up</h1>
+  <label><span>First Name :</span>
+    <%= f.input_field :first_name, label: false, :required => true, :autofocus => true  %>
+  </label>
+    <label><span>Last Name :</span>
+      <%= f.input_field :last_name, label: false, :required => true %>
+    </label>
+      <label><span>Your Email :</span>
+        <%= f.input_field :email, label: false, :required => true  %>
+      </label>
+      <label><span>Password :</span>
+        <%= f.input_field :password, label: false, :required => true %>
+      </label>
+    <label><span>&nbsp;</span><input type="submit" class="button" value="Send"></label>
+<% end %>

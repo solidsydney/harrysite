@@ -14,5 +14,5 @@ class Issue < ActiveRecord::Base
   has_attached_file :mag
   #validates_attachment_presence :mag
   #validates_attachment_content_type :mag, :content_type => ['application/pdf']
-  default_scope order: "created_at desc"
+  default_scope {order("created_at desc")}
 end

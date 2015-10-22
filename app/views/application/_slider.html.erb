@@ -1,0 +1,46 @@
+<header>
+  <!-- <a href=""><h1></h1></a> -->
+  <div id="wrapper">
+    <div id="bannerscollection">
+      <div class="myloader"></div>
+      <!-- CONTENT -->
+      <ul class="bannerscollection_zoominout_list">
+        <% Slider.last(6).each do |slider| %>
+        <li data-horizontalPosition="bottom" data-verticalPosition="center" data-initialZoom="0.8" data-finalZoom="1" >
+          <%= image_tag slider.slide(:trend_small), width: "2500", height: "1570" %></li>
+         <% end %>
+      </ul>
+    </div>
+    <div class="text">
+      <h1>Harry Field Montessori School</h1>
+      <a href="#about" class="scroll_down"></a>
+    </div>
+  </div>
+  <nav>
+    <div class="container">
+      <a class="logo" href="#wrapper"></a>
+      <span></span>
+      <ul class="nav right">
+        <% Menu.order(position: :asc).roots.each do |menu| %>
+            <li <%# if menu.descendants.any? %>>
+              <a href="<%= menu.url.present? ? url_for(menu.url) : "#" %>" class="basic-c"><%= menu.name %></a>
+             <!-- <%# if menu.descendants.any? %>
+                  <ul class="dropdown-menu">
+                    <%# menu.descendants.each do |menu_item| %>
+                        <li>
+                          <%#=  menu_item.category.present? ? link_to(menu_item.name, menu_item.category) : link_to(menu_item.name, menu_item.url) %>
+                        </li>
+                    <%# end %>
+                  </ul>
+              <%# end %>
+              -->
+            </li>
+        <% end %>
+        <li><a href="http://erp.harryfieldschools.com" target="_blank">Login</a></li>
+        <li>
+          <%= link_to "SignUp", new_user_registration_url %>
+
+      </ul>
+    </div>
+  </nav>
+</header>

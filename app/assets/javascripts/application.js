@@ -14,50 +14,30 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require bootstrap
-//= require jquery.stellar
+//= require jquery-ui
 //= require jquery-migrate-1.2.1
+//= require modernizr-2.6.2.min
+//= require jquery.inview.min
+//= require jquery.smooth-scroll.min
+//= require bannerscollection_zoominout
+//= require jquery.mixitup.min
+//= require jquery.magnific-popup.min
+//= require owl.carousel.min
+//= require jquery.autosize
+//= require jquery.validate.min
+//= require jquery.easing.1.3
+//= require init
+//= require selectivizr-min
 
-//= require jquery.countdown
-//= require fluidvids
-//= require retina-1.1.0.min
-//= require jquery.resizestop.min
-//= require main
+
 //= require nprogress
 //= require nprogress-turbolinks
-//= require google-analytics-turbolinks
-//= require contacts
-//= require jquery.flexslider
-//= require shCore
-//= require shBrushXml
-//= require shBrushJScript
-//= require jquery.easing
-//= require jquery.mousewheel
-//= require masonry/jquery.masonry
-//= require masonry/jquery.event-drag
-//= require masonry/jquery.imagesloaded.min
-//= require masonry/jquery.infinitescroll.min
-//= require masonry/modernizr-transitions
-//= require categories
+//= require respond.js
 
 
-$(function(){
-    $('.flexslider').flexslider({
-        animation: "slide",
-        controlNav: false
-    });
-});
 
-$(function(){
 
-    var $container = $('#masonry-container');
 
-    $container.imagesLoaded(function(){
-        $container.masonry({
-            itemSelector: '.box',
-            isAnimated: !Modernizr.csstransitions
-        });
-    });
-});
 
 
 

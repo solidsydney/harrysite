@@ -17,24 +17,15 @@
       <%= f.input :post_image, as: :file %>
       <%= f.input :summary, as: :text, :input_html => {rows: 2} %>
       <% if @post.new_record? %>
-      <%=  f.input :post_type, collection: ['Video' , 'Blog'], as: :radio_buttons %>
+      <%=  f.input :post_type, collection: ['Gallery' , 'Blog'], as: :radio_buttons %>
       <div id="blog" style="display: none">
         <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full', 'require' => false}, class: "ckeditor"} %>
       </div>
 
-      <div id="video" style="display: none;">
-        <%= f.input :video_url, label: "Youtube Video Url", input_html: {class: "input-xlarge"} %>
-      </div>
       <% else %>
-           <% if @post.post_type == "Video" %>
-              <%= f.input :video_url, label: "Youtube Video Url", input_html: {class: "input-xlarge"} %>
-           <% else %>
               <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full', 'require' => false}, class: "ckeditor"} %>
-    <% end %>
       <% end %>
-      <% if current_user.admin?  %>
-        <%= f.input :publish_on, as: :string %>
-      <% end %>
+
 
       <div class="control-group string required post_title">
         <%= f.label :categories, class:"required control-label"%>

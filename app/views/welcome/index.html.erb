@@ -1,22 +1,211 @@
-<div class="row-fluid">
-  <%= render 'cover' %>
-  <div class="span6">
-    <% @top_posts.in_groups_of(2, false) do |row_posts|%>
-        <div class="row-fluid">
-          <%= render partial: "top_posts", collection: row_posts, as: :post %>
+<%= provide :header do %>
+    <%= render "slider" %>
+<% end %>
+
+
+<section id="about">
+  <% Post.blog_posts.recent.limit(4).each  do |post, i|%>
+  <article>
+    <div>
+      <h1><%= post.title%></h1>
+      <a class="link1 icon-icon1 read_more" href="#post-<%= post.id %>">
+        <%= image_tag post.post_image(:original), style: "max-width: 262%" %>
+      </a>
+      <p><%= truncate post.summary, length: 100, omission: "..." %></p>
+      <a class="link2 read_more" href="#post-<%= post.id %>">View More</a>
+      <div class="clearfix"></div>
+    </div>
+  </article>
+  <%  end %>
+  <% Post.blog_posts.each_with_index  do |post, i|%>
+      <div id="post-<%= post.id %>" class="about-content">
+        <div class="container">
+          <h1><%= post.title%></h1>
+          <p>
+            <%= image_tag post.post_image(:original) %>
+          </p>
+          <p><%= post.body %></p>
+
         </div>
-    <% end %>
+      </div>
+  <% end %>
+</section>
+
+
+
+
+<section id="belive">
+  <div class="container">
+    <h1>Harry Field School</h1>
+    <p>
+      THINK ABOUT ”CREATIVE MINDS” THEN HARRYFIELD MONTESSORI IS THE BEST PLACE FOR YOUR KIDS.
+      WE HAVE FRIENDLY CUSTOMER SERVICE,VERY CLEAN ENVIRONMENT FOR YOUR KIDS TO GROW, BED, NCE & MONTESSORI CERTIFIED PROFESSIONAL TO SPEND QUALITY TIME & BRING OUT CREATIVE VALUES OUT OF YOUR KIDS, HOME AWAY FROM HOM
+    </p>
   </div>
-
-</div>
-
-<div class="row-fluid transitions-enabled infinite-scroll clearfix" id="masonry-container">
-    <%= render @more_posts unless @more_posts.nil? %>
-</div>
+</section>
 
 
-<div class="pager" style="display: none;">
-  <%= render "page_nav", posts: @posts %>
-</div>
 
+<section id="filter">
+  <div class="container">
+    <h1>Gallery</h1>
+    <ul>
+      <li class="button filter" data-role="button" data-filter="all">All</li>
+      <li class="button filter" data-tole="button" data-filter="branding">Comfort</li>
+      <li class="button filter" data-filter="web">Play</li>
+      <li class="button filter" data-filter="app">Infrastructure</li>
+      <li class="button filter" data-filter="printing">Creativity</li>
+    </ul>
+
+    <div id="grid">
+      <ul class="wf ns popup-gallery">
+        <% Post.gallery_posts.recent.limit(9).each do |post|%>
+        <li class="mix printing">
+          <!--<a href="http://www.youtube.com/watch?v=IxJPSIv3J-g" class="mfp-iframe" title="Video description">-->
+            <%= link_to image_path(post.post_image.url(:original)), title: "Image description"  do %>
+              <%= image_tag post.post_image.url(:original) %>
+            <div class="text">
+              <h5>Story Craft</h5>
+              <span>Branding</span>
+              <span>Printing</span>
+            </div>
+          <% end %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+   <div class="container">
+     <h1>Our Differential Factor</h1>
+     <p style="color: white"></p>
+
+     <article>
+       <div class="basic">
+         <h2>Facilities</h2>
+       </div>
+       <ul>
+         <li class="yes">Two purpose built sites</li>
+         <li class="yes">Bright colourful and stimulating classes and rooms</li>
+         <li class="yes">Spacious and fully air conditioned classes</li>
+         <li class="yes">well stocked library</li>
+         <li class="yes">Fully fitted computer room</li>
+         <li class="yes">Interactive whiteboard for learning</li>
+       </ul>
+     </article>
+     <article>
+       <div class="classic">
+         <h2>Curriculum</h2>
+       </div>
+       <ul>
+         <li class="yes">Enquiry based to develop thinking skills</li>
+         <li class="yes">Equipping to become lifelong learners</li>
+         <li class="yes">Adapted Montessori principle and application</li>
+         <li class="yes">Blend of British, Christian and Nigerian curriculum</li>
+         <li class="yes">Challenging and stimulating programmes and activities all year round</li>
+       </ul>
+     </article>
+     <article>
+       <div class="premium">
+         <h2>Teachers</h2>
+       </div>
+       <ul>
+         <li>We have Experienced, Professional Teachers and Staff</li>
+         <li class="yes">Who are dedicated and committed to their work</li>
+         <li class="yes">Friendly and caring</li>
+         <li class="yes">Give high quality support and opportunity for professional development</li>
+         <li class="yes">work as team with the children</li>
+       </ul>
+     </article>
+     <article>
+       <div class="pro">
+         <h2>Our Mission</h2>
+       </div>
+       <ul>
+         <li class="yes">To operate a first class Creche,Pre-school and primary in a warm and inviting environment where teachers and nannies can help children unlock and develop their potentials using the best and most modern educational method and resources while at the same time making childhood a pleasant and memorable experience.</li>
+       </ul>
+     </article>
+   </div>
+ </section>
+
+<section id="contact">
+
+    <div class="container">
+      <div class="alert-box" >
+        <%= flash_messages %>
+      </div>
+      <h1>Stay In Touch</h1>
+      <%= simple_form_for(@feedback) do |f| %>
+          <%= f.error_notification %>
+          <div class="form-inputs main-form">
+            <%= f.input :fullname , :label=>false, :input_html => {:placeholder => "Your Name (Required)", :class=>"gray"}, :wrapper_html=>{:class=>"cont1"} %>
+            <%= f.input :email , as: :string,:label=>false, :input_html => {:placeholder => "Your Email (Required)", :class=>"gray"}, :wrapper_html=>{:class=>"cont1"} %>
+            <%= f.input :message , :label=>false, :input_html => {:placeholder => "Your Message", :class=>"gray"}, :wrapper_html=>{:class=>"cont2"} %>
+          </div>
+          <div class="human-test">
+            <div id="test">
+              <p>Please select number : <strong><span></span></strong></p>
+            </div>
+            <label class="btn" >
+              <input type="radio" name="rand" value="one"><span>1</span>
+            </label>
+            <label class="btn">
+              <input type="radio" name="rand" value="two"><span>2</span>
+            </label>
+            <label class="btn">
+              <input type="radio" name="rand" value="three"><span>3</span>
+            </label>
+            <label class="btn">
+              <input type="radio" name="rand" value="four"><span>4</span>
+            </label>
+            <label class="btn">
+              <input type="radio" name="rand" value="five"><span>5</span>
+            </label>
+            <button class="btn medium disabled">SUBMIT</button>
+          </div>
+      <% end %>
+      <div class="clearfix"></div>
+    </div>
+
+<article class="info">
+  <h6>More info</h6>
+  <div class="drop">
+    <h4>HARRYFIELD SCHOOLS</h4>
+    <p>HARRY FIELD MONTESSORI <BR> “CREATIVE MIND”<br>
+      67A, ODUKPANI ROAD, OFF WAPI JUNCTION
+      CROSS RIVER STATE (CALABAR)</p>
+    <h4>Email</h4>
+    <p>info.harryfield@yahoo.com</p>
+    <h4>Phone</h4>
+    <p>08038764021,08184528641,08033638599</p>
+  </div>
+</article>
+
+<article class="map">
+  <div id="map-canvas"></div>
+</article>
+
+</section>
+
+<section class="awesome-page">
+  <div class="container">
+    <h1>Register your Child Today</h1>
+    <a class="btn large" href="<%= new_user_registration_url %>">REGISTER HERE</a>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container">
+    <ul>
+      <li class="fb"><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
+      <li class="tw"><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+      <li class="ln"><a href="javascript:;"><i class="fa fa-linkedin"></i></a></li>
+      <li class="yt"><a href="javascript:;"><i class="fa fa-youtube"></i></a></li>
+      <li class="gg"><a href="javascript:;"><i class="fa fa-google-plus"></i></a></li>
+
+    </ul>
+  </div>
+</section>
 

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"><!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8 " />
+  <title><%= content_for?(:title) ? yield(:title) : "School" %> - Blanck Digital</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width">
+  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag "application"  %>
+  <%= csrf_meta_tags %>
+
+
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+  <!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
+
+
+  <!--Internet Explorer 8 or older doesn't support media query. This script helps ie7 and ie8 to recognize media queries-->
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+
+</head>
+
+<body>
+<div id="preloader"></div>
+<div class="layout">
+
+  <!-- begin POPUP EMAIL -->
+  <div class="popup-email">
+    <div class="element">
+      <button id="btn" class="btn medium" type="button">OK</button>
+    </div>
+  </div>
+  <!-- end POPUP EMAIL -->
+
+
+  <!-- BEGIN HEADER -->
+  <% if content_for?(:header) %>
+      <%= yield (:header) %>
+  <% end %>
+  <!-- END HEADER -->
+
+
+  <main>
+    <%= yield %>
+  </main>
+
+
+  <div class='layout_footer'></div>
+
+</div>
+
+<a href="#about" id="to_the_top"></a>
+
+<!-- BEGIN FOOTER -->
+<footer>
+  <div class="container">
+    <small style="color: white;"> HarryField Montessori School ©2014. All rights reserved.</small>
+  </div>
+</footer>
+
+<link href="http://externalcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+
+
+
+</body>
+</html>
+
+
+
+

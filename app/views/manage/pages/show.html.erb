@@ -24,6 +24,7 @@
         <div class="body">
           <p><%= raw @page.body %></p>
           <p><b>Published: <%= @page.created_at.present? ? @page.created_at.to_date.to_s(:long) : "Not Published" %></b></p>
+          <p><b>URL: <%= url_for(@page) %></b></p>
            <div class="btn-group hidden-phone">
             <%= link_to "Add new page", new_manage_page_url, class: "btn" %>
             <% if current_user.admin? %>

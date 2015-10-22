@@ -1,5 +1,7 @@
 require 'sidekiq/web'
 Franka::Application.routes.draw do
+  resources :feedbacks
+
   resources :post_entries
 
   get "posts/page/:page" => "posts#index"

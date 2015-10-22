@@ -5,6 +5,7 @@ class WelcomeController < ApplicationController
     @posts = Post.recent.page(params[:page]).per_page(27)
     @top_posts = @posts[0..3]
     @more_posts = @posts[4..27]
+    @feedback = Feedback.new
     respond_to do |format|
       format.html
       format.js

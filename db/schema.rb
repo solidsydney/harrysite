@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922083209) do
+ActiveRecord::Schema.define(version: 20151022094454) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 20140922083209) do
     t.datetime "updated_at"
     t.boolean  "has_account", default: false
     t.boolean  "active",      default: true
+  end
+
+  create_table "feedbacks", force: true do |t|
+    t.string   "fullname"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "impressions", force: true do |t|

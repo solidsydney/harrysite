@@ -1,5 +1,19 @@
 <header>
-  <div class="container">
-    <a href="<%= url_for root_url %>" class="logo"><%= image_tag "IMG_9338.JPG", alt: "logo"%></a>
-  </div>
+  <!-- <a href=""><h1></h1></a> -->
+  <% if content_for?(:header) %>
+
+  <% end %>
+  <nav>
+    <div class="container">
+      <a class="logo" href="#wrapper"></a>
+      <span></span>
+      <ul class="nav right">
+        <li><a href="#about">about</a></li>
+        <li><a href="#filter">project</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">SignUp</a></li>
+
+      </ul>
+    </div>
+  </nav>
 </header>

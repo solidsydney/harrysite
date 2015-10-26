@@ -99,11 +99,11 @@ Franka::Application.configure do
 
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-      :address        => 'smtp.sendgrid.net',
+      :address        => 'smtp.config',
       :port           => '587',
       :authentication => :plain,
-      :user_name      => 'blanckdigital',
-      :password       => 'xoxoblanck10',
+      :user_name      => 'username',
+      :password       => 'password',
       :domain         => 'blanckdigital.com'
   }
 
@@ -111,7 +111,7 @@ Franka::Application.configure do
                         :email => {
                             :email_prefix => "[Error] ",
                             :sender_address => %{"BlanckDigital[Error Alert]" <error@blanckdigital.com>},
-                            :exception_recipients => %w{ramzauchenna@gmail.com}
+                            :exception_recipients => %w{solidsydney@gmail.com}
                         }
 
 

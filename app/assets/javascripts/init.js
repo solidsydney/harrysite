@@ -454,7 +454,7 @@ $(document).ready( function () {
 
           var mapOptions = {
             zoom: 13,
-            center: new google.maps.LatLng(5.012167, 8.3368475),
+            center: new google.maps.LatLng(6.5494335, 3.3900894),
             scrollwheel: false,
 
             // disable mapType-top_right corner
@@ -469,7 +469,7 @@ $(document).ready( function () {
             mapOptions);
 
             var marker1 = new google.maps.Marker({
-                position: new google.maps.LatLng(5.012167, 8.3368475),
+                position: new google.maps.LatLng(6.5494335, 3.3900894),
                 map: map,
                 icon: 'images/pin.png' // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
             });

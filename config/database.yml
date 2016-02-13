@@ -11,7 +11,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: ayi
+  database: first_ideal_dev
   pool: 5
   username: root
   password: Mrsayinsansa@123
@@ -23,16 +23,17 @@ development:
 test:
     adapter: mysql2
     encoding: utf8
-    database: ayi
+    database: first_ideal_test
     pool: 5
     username: root
+    password: hetalksinme2
     password: Mrsayinsansa@123
     host: 127.0.0.1
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: harryFieldSchool
+  database: first_ideal
   pool: 5
   username: root
   password: Mrsayinsansa@123

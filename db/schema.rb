@@ -164,12 +164,6 @@ ActiveRecord::Schema.define(version: 20151022094454) do
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
-  create_table "product_types", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "sliders", force: true do |t|
     t.string   "name"
     t.string   "url"

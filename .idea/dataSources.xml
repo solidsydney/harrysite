@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2637983057">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="Rails franka: development" uuid="228b23c4-f9e0-4a90-8dbf-9afef5f385ea">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/ayi</jdbc-url>
-      <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails franka: test" uuid="43de5820-0867-48d0-b7b5-aa8666201be3">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/franka_test</jdbc-url>
-      <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails franka: production" uuid="34692aa8-bf88-4271-9349-58cd8ae4e546">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/ayi</jdbc-url>
-      <libraries />
     </data-source>
   </component>
 </project>

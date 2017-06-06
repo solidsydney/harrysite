@@ -8,13 +8,22 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+#development:
+#  adapter: mysql2
+#  encoding: utf8
+#  database: ayi
+#  pool: 5
+#  username: root
+#  password: Mrsayinsansa@123
+#  host: 127.0.0.1
+
 development:
   adapter: mysql2
   encoding: utf8
-  database: ayi
+  database: esthersgroup_dev
   pool: 5
   username: root
-  password: Mrsayinsansa@123
+  password: hetalksinme2
   host: 127.0.0.1
 
 # Warning: The database defined as "test" will be erased and
@@ -23,16 +32,16 @@ development:
 test:
     adapter: mysql2
     encoding: utf8
-    database: ayi
+    database: esthersgroup_test
     pool: 5
     username: root
-    password: Mrsayinsansa@123
+    password: hetalksinme2
     host: 127.0.0.1
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: harryFieldSchool
+  database: esthersgroup
   pool: 5
   username: root
   password: Mrsayinsansa@123
